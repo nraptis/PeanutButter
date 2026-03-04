@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/peanutbutter_runner.dir/src/main_runner.cpp.o -o peanutbutter_runner  libpeanutbutter_core.a

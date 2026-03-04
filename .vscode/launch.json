@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug peanutbutter (Qt)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build-local/peanutbutter",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "cmake: build peanutbutter"
+        },
+        {
+            "name": "Debug peanutbutter_runner (CLI)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build-local/peanutbutter_runner",
+            "args": [
+                "pack",
+                "input",
+                "archive"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "cmake: build peanutbutter_runner"
+        }
+    ]
+}

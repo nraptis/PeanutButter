@@ -1,0 +1,7 @@
+{
+  "default_source_path": "input",
+  "default_archive_path": "archive",
+  "default_unarchive_path": "unzipped",
+  "default_password_1": "banana",
+  "default_password_2": "apple"
+}
