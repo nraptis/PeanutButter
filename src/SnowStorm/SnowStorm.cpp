@@ -16,29 +16,17 @@ namespace fs = std::filesystem;
 
 namespace {
 
-bool isIgnorableMetadata(const fs::path& pPath) {
-  const std::string aName = pPath.filename().string();
-  return aName == ".DS_Store" ||
-         aName == ".localized" ||
-         aName == "Icon\r" ||
-         aName == "Thumbs.db" ||
-         aName == "thumbs.db" ||
-         aName == "ehthumbs.db" ||
-         aName == "Ehthumbs.db" ||
-         aName == "Thumbs.db:encryptable";
-}
-
 bool hasMeaningfulEntries(const fs::path& pDirectory) {
   for (const auto& aEntry : fs::directory_iterator(pDirectory)) {
-    if (!isIgnorableMetadata(aEntry.path())) {
-      return true;
-    }
+    (void)aEntry;
+    return true;
   }
   return false;
 }
 
 void writeFileEntry(const fs::path& pFilePath,
-                    SnowStormBundleWriter& pWriter) {
+                    SnowStormBundleWriter& pWriter,
+                    std::uint64_t pBlockSize) {
   std::vector<char> aHeader;
   const std::string aName = pFilePath.filename().string();
   SnowStormUtils::appendName(aHeader, aName);
@@ -50,7 +38,7 @@ void writeFileEntry(const fs::path& pFilePath,
     throw std::runtime_error("Failed to open file for read: " + pFilePath.string());
   }
 
-  std::vector<char> aBlock(static_cast<std::size_t>(gBlockSize));
+  std::vector<char> aBlock(static_cast<std::size_t>(pBlockSize));
   while (aInput) {
     aInput.read(aBlock.data(), static_cast<std::streamsize>(aBlock.size()));
     const std::streamsize aBytesRead = aInput.gcount();
@@ -63,6 +51,7 @@ void writeFileEntry(const fs::path& pFilePath,
 
 void bundleDirectory(const fs::path& pDirectory,
                      SnowStormBundleWriter& pWriter,
+                     std::uint64_t pBlockSize,
                      std::uint64_t& pFilesDone) {
   std::vector<fs::path> aFiles;
   std::vector<fs::path> aDirectories;
@@ -73,7 +62,7 @@ void bundleDirectory(const fs::path& pDirectory,
   pWriter.writeBytes(aHeader);
 
   for (const auto& aFilePath : aFiles) {
-    writeFileEntry(aFilePath, pWriter);
+    writeFileEntry(aFilePath, pWriter, pBlockSize);
     ++pFilesDone;
     pWriter.setFilesDone(pFilesDone);
   }
@@ -86,13 +75,14 @@ void bundleDirectory(const fs::path& pDirectory,
     std::vector<char> aName;
     SnowStormUtils::appendName(aName, aDirectoryPath.filename().string());
     pWriter.writeBytes(aName);
-    bundleDirectory(aDirectoryPath, pWriter, pFilesDone);
+    bundleDirectory(aDirectoryPath, pWriter, pBlockSize, pFilesDone);
   }
 }
 
 void unbundleDirectory(const fs::path& pDestination,
                        SnowStormBundleReader& pReader,
                        std::vector<fs::path>& pCreatedFiles,
+                       std::uint64_t pBlockSize,
                        std::uint64_t& pFilesDone) {
   const std::uint16_t aFileCount = SnowStormUtils::readUInt16(pReader.readExact(2));
 
@@ -110,7 +100,7 @@ void unbundleDirectory(const fs::path& pDestination,
 
       std::uint64_t aRemaining = aFileSize;
       while (aRemaining > 0) {
-        const std::uint64_t aTake = std::min<std::uint64_t>(aRemaining, gBlockSize);
+        const std::uint64_t aTake = std::min<std::uint64_t>(aRemaining, pBlockSize);
         const std::vector<char> aBlock = pReader.readExact(aTake);
         aOutput.write(aBlock.data(), static_cast<std::streamsize>(aBlock.size()));
         if (!aOutput) {
@@ -134,7 +124,7 @@ void unbundleDirectory(const fs::path& pDestination,
     const std::string aDirectoryName = readEntryName(pReader);
     const fs::path aDirectoryPath = pDestination / aDirectoryName;
     fs::create_directories(aDirectoryPath);
-    unbundleDirectory(aDirectoryPath, pReader, pCreatedFiles, pFilesDone);
+    unbundleDirectory(aDirectoryPath, pReader, pCreatedFiles, pBlockSize, pFilesDone);
   }
 }
 
@@ -151,6 +141,12 @@ SnowStorm::SnowStorm(std::uint64_t pBlockSize,
       mCryptBufferStorage(static_cast<std::size_t>(pBlockSize), 0) {
   if (mCrypt == nullptr) {
     throw std::runtime_error("SnowStorm requires a non-null Encryptable dependency");
+  }
+  if (pBlockSize != kPermanentBlockSize) {
+    throw std::runtime_error("FATAL: block size is permanently fixed at 500000 bytes.");
+  }
+  if ((pStorageFileSize % kPermanentBlockSize) != 0) {
+    throw std::runtime_error("FATAL: archive size must be an exact multiple of 500000 bytes.");
   }
   if (mBlockSize == 0 || mStorageFileSize == 0 || (mStorageFileSize % mBlockSize) != 0) {
     throw std::runtime_error("Invalid block/archive sizing. archive must be divisible by block size");
@@ -218,7 +214,7 @@ BundleStats SnowStorm::bundle(const fs::path& pSource,
 
   std::uint64_t aFilesDone = 0;
   SnowStormBundleWriter aWriter(*this, aOutputDirectory, aArchiveCount, std::move(pSnowStormProgressMethod), aCounts.mFileCount);
-  bundleDirectory(pSource, aWriter, aFilesDone);
+  bundleDirectory(pSource, aWriter, mBlockSize, aFilesDone);
   aWriter.close();
 
   BundleStats aStats;
@@ -280,7 +276,7 @@ UnbundleStats SnowStorm::unbundle(const fs::path& pSource,
   std::uint64_t aFilesDone = 0;
 
   try {
-    unbundleDirectory(aOutputDirectory, aReader, aCreatedFiles, aFilesDone);
+    unbundleDirectory(aOutputDirectory, aReader, aCreatedFiles, mBlockSize, aFilesDone);
     aReader.close();
   } catch (...) {
     for (const auto& aPath : aCreatedFiles) {

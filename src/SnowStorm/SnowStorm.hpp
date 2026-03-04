@@ -3,12 +3,14 @@
 #include <cstdint>
 #include <filesystem>
 #include <functional>
-#include <memory>
 #include <string>
 #include <vector>
 
 #include "Encryptable.hpp"
 #include "ShouldBundleResult.hpp"
+
+class SnowStormBundleReader;
+class SnowStormBundleWriter;
 
 struct BundleStats {
   std::uint64_t mFileCount = 0;
@@ -24,7 +26,7 @@ struct UnbundleStats {
 };
 
 class SnowStorm {
- public:
+public:
   using SnowStormProgressMethod = std::function<void(std::uint64_t archive_index_1,
                                                      std::uint64_t archive_total,
                                                      std::uint64_t files_done,
@@ -48,21 +50,21 @@ class SnowStorm {
                          const std::filesystem::path& pDestination,
                          SnowStormProgressMethod pSnowStormProgressMethod);
 
-  const unsigned char* mReadBuffer = nullptr;
-  unsigned int mReadBufferIndex = 0;
-
-  const unsigned char* mWriteBuffer = nullptr;
-  unsigned int mWriteBufferIndex = 0;
-
-  const unsigned char* mCryptBuffer = nullptr;
-  unsigned int mCryptBufferIndex = 0;
-
-  Encryptable* mCrypt = nullptr;
-
   std::uint64_t blockSize() const;
   std::uint64_t storageFileSize() const;
 
- private:
+private:
+  friend class SnowStormBundleReader;
+  friend class SnowStormBundleWriter;
+
+  const unsigned char* mReadBuffer = nullptr;
+  unsigned int mReadBufferIndex = 0;
+  const unsigned char* mWriteBuffer = nullptr;
+  unsigned int mWriteBufferIndex = 0;
+  const unsigned char* mCryptBuffer = nullptr;
+  unsigned int mCryptBufferIndex = 0;
+  Encryptable* mCrypt = nullptr;
+
   std::uint64_t mBlockSize = 0;
   std::uint64_t mStorageFileSize = 0;
   std::vector<unsigned char> mReadBufferStorage;

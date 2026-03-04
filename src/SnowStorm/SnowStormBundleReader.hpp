@@ -10,7 +10,7 @@
 #include "SnowStorm/SnowStorm.hpp"
 
 class SnowStormBundleReader {
- public:
+public:
   SnowStormBundleReader(SnowStorm& pSnowStorm,
                         const std::filesystem::path& pInputDirectory,
                         SnowStorm::SnowStormProgressMethod pSnowStormProgressMethod);
@@ -24,7 +24,7 @@ class SnowStormBundleReader {
 
   void close();
 
- private:
+private:
   void loadBundle(std::size_t pIndex);
   bool loadNextBlock();
 

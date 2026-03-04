@@ -8,7 +8,7 @@
 #include "SnowStorm/SnowStorm.hpp"
 
 class SnowStormBundleWriter {
- public:
+public:
   SnowStormBundleWriter(SnowStorm& pSnowStorm,
                         const std::filesystem::path& pOutputDirectory,
                         std::uint64_t pArchiveTotal,
@@ -23,7 +23,7 @@ class SnowStormBundleWriter {
 
   std::uint64_t archiveCount() const;
 
- private:
+private:
   void flushBlockIfFull();
   void writeBlock();
   void openNextArchive();

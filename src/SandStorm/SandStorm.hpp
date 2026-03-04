@@ -7,7 +7,7 @@
 #include "SandStorm/TaylorCipher.hpp"
 
 class SandStorm : public Encryptable {
- public:
+public:
   SandStorm(std::uint64_t pBlockSize,
             std::u32string pPassword1,
             std::u32string pPassword2);
@@ -22,6 +22,7 @@ class SandStorm : public Encryptable {
                std::uint64_t pSize,
                std::string* pError) override;
 
+private:
   std::uint64_t mBlockSize;
   std::u32string mPassword1;
   std::u32string mPassword2;

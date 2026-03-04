@@ -4,7 +4,7 @@
 #include <string>
 
 class Encryptable {
- public:
+public:
   virtual ~Encryptable() = default;
 
   virtual bool encrypt(const unsigned char* pSource,

@@ -9,8 +9,8 @@
 namespace SnowStormUtils {
 
 bool shouldIgnoreEntry(const fs::path& pPath) {
-  const std::string aStem = pPath.stem().string();
-  return !aStem.empty() && aStem[0] == '.';
+  (void)pPath;
+  return false;
 }
 
 std::string bundleName(std::uint64_t pIndex) {

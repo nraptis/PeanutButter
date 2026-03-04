@@ -965,6 +965,34 @@ CMakeFiles/peanutbutter.dir/src/main.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/qvarlengtharray.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qalloc.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication_platform.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qaction.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qicon.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpalette.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qbrush.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qfont.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qendian.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qfontmetrics.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qfontinfo.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qfontvariableaxis.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qsizepolicy.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qstyleoption.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qvalidator.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qslider.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractslider.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qstyle.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qtabbar.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qrubberband.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qframe.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qabstractitemmodel.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QCoreApplication \
   /opt/homebrew/lib/QtGui.framework/Headers/QDragEnterEvent \
   /opt/homebrew/lib/QtGui.framework/Headers/qevent.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qiodevice.h \
@@ -982,7 +1010,6 @@ CMakeFiles/peanutbutter.dir/src/main.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/QSizeF \
   /opt/homebrew/lib/QtGui.framework/Headers/QTransform \
   /opt/homebrew/lib/QtGui.framework/Headers/qscreen_platform.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qkeysequence.h \
   /opt/homebrew/lib/QtGui.framework/Headers/QDropEvent \
   /opt/homebrew/lib/QtCore.framework/Headers/QEvent \
   /opt/homebrew/lib/QtCore.framework/Headers/QFile \
@@ -1030,19 +1057,7 @@ CMakeFiles/peanutbutter.dir/src/main.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtimezone.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qdialog.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qaction.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qicon.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpalette.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qbrush.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfont.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qendian.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfontmetrics.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfontinfo.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qfontvariableaxis.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qsizepolicy.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QFrame \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qframe.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QGridLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qgridlayout.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlayout.h \
@@ -1056,7 +1071,6 @@ CMakeFiles/peanutbutter.dir/src/main.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/qjsonvalue.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qcborvalue.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qcborcommon.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h \
   /opt/homebrew/lib/QtCore.framework/Headers/quuid.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h \
@@ -1087,7 +1101,6 @@ CMakeFiles/peanutbutter.dir/src/main.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QScrollBar \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qscrollbar.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractslider.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QSizePolicy \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QSpacerItem \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \

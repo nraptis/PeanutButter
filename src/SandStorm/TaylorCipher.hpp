@@ -3,7 +3,7 @@
 #include <cstddef>
 
 class TaylorCipher {
- public:
+public:
   TaylorCipher() = default;
 
   void transformWindow(const unsigned char* pSource,
