@@ -18,7 +18,14 @@ namespace {
 
 bool isIgnorableMetadata(const fs::path& pPath) {
   const std::string aName = pPath.filename().string();
-  return aName == ".DS_Store" || aName == ".localized" || aName == "Icon\r";
+  return aName == ".DS_Store" ||
+         aName == ".localized" ||
+         aName == "Icon\r" ||
+         aName == "Thumbs.db" ||
+         aName == "thumbs.db" ||
+         aName == "ehthumbs.db" ||
+         aName == "Ehthumbs.db" ||
+         aName == "Thumbs.db:encryptable";
 }
 
 bool hasMeaningfulEntries(const fs::path& pDirectory) {

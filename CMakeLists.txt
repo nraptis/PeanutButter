@@ -4,6 +4,26 @@ project(PeanutButter LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Release profile: max optimization and dedicated artifact folder.
+if (CMAKE_CXX_COMPILER_ID MATCHES "Clang|GNU")
+  add_compile_options(
+    $<$<CONFIG:Release>:-O3>
+    $<$<CONFIG:Release>:-march=native>
+  )
+endif()
+
+include(CheckIPOSupported)
+check_ipo_supported(RESULT PEANUTBUTTER_IPO_SUPPORTED OUTPUT PEANUTBUTTER_IPO_ERROR)
+if (PEANUTBUTTER_IPO_SUPPORTED)
+  set(CMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE ON)
+else()
+  message(STATUS "IPO/LTO not supported: ${PEANUTBUTTER_IPO_ERROR}")
+endif()
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/release")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/release")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/release")
+
 set(PEANUTBUTTER_CORE_SOURCES
   src/Globals.cpp
   src/ConfigLoader.cpp

@@ -1,0 +1,119 @@
+PeanutButter Byte Map Walkthrough (Unicode Filename + Unicode Folder)
+====================================================================
+
+Run context used
+----------------
+- block size (`gBlockSize`): 8 bytes
+- archive size (`gArchiveSize`): 16 bytes (2 blocks/archive)
+- cipher (`TaylorCipher`): reverse bytes within each 8-byte block
+- packed source: `input`
+
+Input tree that was packed
+--------------------------
+- input/b.txt         -> 62 61 74 6d 61 6e ("batman")
+- input/丐丑丒.txt     -> 61 78 ("ax")
+- input/f1/c.txt      -> 63 61 74 ("cat")
+- input/❤️‍🔥         -> empty directory
+
+Unicode encoding facts for this run
+-----------------------------------
+SnowStorm stores entry names as raw bytes from `std::filesystem::path::filename().string()`.
+On this machine/run, those bytes are UTF-8.
+
+`丐丑丒.txt` bytes:
+- 丐 (U+4E10) -> e4 b8 90
+- 丑 (U+4E11) -> e4 b8 91
+- 丒 (U+4E12) -> e4 b8 92
+- .txt        -> 2e 74 78 74
+- total name bytes = 13 -> length field `0d 00`
+
+`❤️‍🔥` bytes:
+- U+2764 -> e2 9d a4
+- U+FE0F -> ef b8 8f
+- U+200D -> e2 80 8d
+- U+1F525 -> f0 9f 94 a5
+- total name bytes = 13 -> length field `0d 00`
+
+Archive files produced
+----------------------
+- snowstorm_0000.jag .. snowstorm_0005.jag (6 archives, 16 bytes each)
+
+Block-level encrypted -> decrypted bytes
+----------------------------------------
+Archive 0000
+- E[78 74 2e 62 00 05 00 02] -> D[02 00 05 00 62 2e 74 78]
+- E[00 00 00 00 00 00 06 74] -> D[74 06 00 00 00 00 00 00]
+
+Archive 0001
+- E[0d 6e 61 6d 74 61 62 00] -> D[00 62 61 74 6d 61 6e 0d]
+- E[e4 91 b8 e4 90 b8 e4 00] -> D[00 e4 b8 90 e4 b8 91 e4]
+
+Archive 0002
+- E[00 02 74 78 74 2e 92 b8] -> D[b8 92 2e 74 78 74 02 00]
+- E[78 61 00 00 00 00 00 00] -> D[00 00 00 00 00 00 61 78]
+
+Archive 0003
+- E[00 01 31 66 00 02 00 02] -> D[02 00 02 00 66 31 01 00]
+- E[03 74 78 74 2e 63 00 05] -> D[05 00 63 2e 74 78 74 03]
+
+Archive 0004
+- E[63 00 00 00 00 00 00 00] -> D[00 00 00 00 00 00 00 63]
+- E[9d e2 00 0d 00 00 74 61] -> D[61 74 00 00 0d 00 e2 9d]
+
+Archive 0005
+- E[f0 8d 80 e2 8f b8 ef a4] -> D[a4 ef b8 8f e2 80 8d f0]
+- E[00 00 00 00 00 a5 94 9f] -> D[9f 94 a5 00 00 00 00 00]
+
+Global decrypted stream map (offset 0..95)
+------------------------------------------
+00..01  02 00                   root file_count = 2
+
+02..03  05 00                   name_length = 5
+04..08  62 2e 74 78 74          file name = "b.txt"
+09..16  06 00 00 00 00 00 00 00 file_size(u64 LE) = 6
+17..22  62 61 74 6d 61 6e       file data (b.txt) = "batman"
+
+23..24  0d 00                   name_length = 13 bytes
+25..37  e4 b8 90 e4 b8 91 e4 b8 92 2e 74 78 74
+                                 file name bytes (UTF-8) = "丐丑丒.txt"
+38..45  02 00 00 00 00 00 00 00 file_size(u64 LE) = 2
+46..47  61 78                   file data (丐丑丒.txt) = "ax"
+
+48..49  02 00                   root subdir_count = 2
+
+50..51  02 00                   subdir name_length = 2
+52..53  66 31                   subdir name = "f1"
+54..55  01 00                   f1 file_count = 1
+56..57  05 00                   file name_length = 5
+58..62  63 2e 74 78 74          file name = "c.txt"
+63..70  03 00 00 00 00 00 00 00 file_size(u64 LE) = 3
+71..73  63 61 74                file data (f1/c.txt) = "cat"
+74..75  00 00                   f1 subdir_count = 0
+
+76..77  0d 00                   subdir name_length = 13 bytes
+78..90  e2 9d a4 ef b8 8f e2 80 8d f0 9f 94 a5
+                                 subdir name bytes (UTF-8) = "❤️‍🔥"
+91..92  00 00                   ❤️‍🔥 file_count = 0
+93..94  00 00                   ❤️‍🔥 subdir_count = 0
+
+95..95  00                      padding zero
+
+Re-assembly walkthrough
+-----------------------
+1) Decrypt each 8-byte block by reversing it.
+2) Read root file_count=2.
+3) Rebuild file #1 (`b.txt`) from length/name/size/data.
+4) Rebuild file #2 (`丐丑丒.txt`) from length=13, UTF-8 name bytes, size=2, data=`ax`.
+5) Read root subdir_count=2.
+6) Recurse into `f1`, rebuild `c.txt`.
+7) Recurse into `❤️‍🔥`, create empty directory (file_count=0, subdir_count=0).
+8) Ignore trailing padding byte(s).
+
+Why "4 Unicode bytes" is not the right model here
+--------------------------------------------------
+- This format stores a name length in BYTES, then raw name bytes.
+- UTF-8 is variable-width:
+  - ASCII letters like `f` or `2` use 1 byte each.
+  - Many CJK characters use 3 bytes each.
+  - Some emoji code points use 4 bytes, and emoji sequences can combine multiple code points.
+- So character count and byte count are often different.

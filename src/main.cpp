@@ -272,7 +272,14 @@ int main(int argc, char* argv[]) {
 
   auto is_ignorable_metadata = [](const fs::path& p) {
     const std::string name = p.filename().string();
-    return name == ".DS_Store" || name == ".localized" || name == "Icon\r";
+    return name == ".DS_Store" ||
+           name == ".localized" ||
+           name == "Icon\r" ||
+           name == "Thumbs.db" ||
+           name == "thumbs.db" ||
+           name == "ehthumbs.db" ||
+           name == "Ehthumbs.db" ||
+           name == "Thumbs.db:encryptable";
   };
 
   auto has_meaningful_entries = [&](const fs::path& dir) {

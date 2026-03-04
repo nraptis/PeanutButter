@@ -39,6 +39,39 @@
             ]
         },
         {
+            "label": "cmake: configure release-max",
+            "type": "shell",
+            "command": "cmake -S . -B build-release -DCMAKE_BUILD_TYPE=Release",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "cmake: build peanutbutter (release-max)",
+            "type": "shell",
+            "command": "cmake --build build-release --target peanutbutter",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": "cmake: configure release-max",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "cmake: build peanutbutter_runner (release-max)",
+            "type": "shell",
+            "command": "cmake --build build-release --target peanutbutter_runner",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": "cmake: configure release-max",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
             "type": "cppbuild",
             "label": "C/C++: clang build active file",
             "command": "/usr/bin/clang",
