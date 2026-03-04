@@ -20,9 +20,6 @@ events:
     names:
       - "uname"
     candidate_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -39,11 +36,11 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     searched_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/uname"
-      - "/opt/anaconda3/bin/uname"
-      - "/opt/anaconda3/condabin/uname"
       - "/Users/naraptis/.local/bin/uname"
       - "/opt/homebrew/bin/uname"
       - "/Users/naraptis/Library/Python/3.9/bin/uname"
@@ -54,9 +51,6 @@ events:
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -74,9 +68,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "message-v1"
     backtrace:
@@ -105,9 +104,6 @@ events:
       - "make"
       - "smake"
     candidate_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -124,11 +120,11 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     searched_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/gmake"
-      - "/opt/anaconda3/bin/gmake"
-      - "/opt/anaconda3/condabin/gmake"
       - "/Users/naraptis/.local/bin/gmake"
       - "/opt/homebrew/bin/gmake"
       - "/Users/naraptis/Library/Python/3.9/bin/gmake"
@@ -145,10 +141,10 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/gmake"
       - "/opt/pmk/env/global/bin/gmake"
       - "/Library/Apple/usr/bin/gmake"
-      - "/Applications/Codex.app/Contents/Resources/gmake"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/make"
-      - "/opt/anaconda3/bin/make"
-      - "/opt/anaconda3/condabin/make"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/gmake"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/gmake"
+      - "/opt/anaconda3/bin/gmake"
+      - "/opt/anaconda3/condabin/gmake"
       - "/Users/naraptis/.local/bin/make"
       - "/opt/homebrew/bin/make"
       - "/Users/naraptis/Library/Python/3.9/bin/make"
@@ -159,9 +155,6 @@ events:
     found: "/usr/bin/make"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -179,9 +172,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "find-v1"
     backtrace:
@@ -208,9 +206,6 @@ events:
       - "icx"
       - "clang++"
     candidate_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -227,11 +222,11 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     searched_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/c++"
-      - "/opt/anaconda3/bin/c++"
-      - "/opt/anaconda3/condabin/c++"
       - "/Users/naraptis/.local/bin/c++"
       - "/opt/homebrew/bin/c++"
       - "/Users/naraptis/Library/Python/3.9/bin/c++"
@@ -242,9 +237,6 @@ events:
     found: "/usr/bin/c++"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -262,9 +254,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "find-v1"
     backtrace:
@@ -292,9 +289,6 @@ events:
     found: "/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -312,9 +306,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "message-v1"
     backtrace:
@@ -399,9 +398,6 @@ events:
       - "ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -417,13 +413,13 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -441,9 +437,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "find-v1"
     backtrace:
@@ -465,9 +466,6 @@ events:
       - "ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -483,13 +481,13 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -507,9 +505,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "find-v1"
     backtrace:
@@ -531,9 +534,6 @@ events:
       - "strip"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -549,13 +549,13 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -573,9 +573,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "find-v1"
     backtrace:
@@ -597,9 +602,6 @@ events:
       - "ld"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -615,13 +617,13 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -639,9 +641,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "find-v1"
     backtrace:
@@ -663,9 +670,6 @@ events:
       - "nm"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -681,13 +685,13 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -705,9 +709,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "find-v1"
     backtrace:
@@ -729,9 +738,6 @@ events:
       - "objdump"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -747,13 +753,13 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -771,9 +777,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "find-v1"
     backtrace:
@@ -795,9 +806,6 @@ events:
       - "objcopy"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -813,12 +821,12 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     searched_directories:
       - "/usr/bin/objcopy"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/objcopy"
-      - "/opt/anaconda3/bin/objcopy"
-      - "/opt/anaconda3/condabin/objcopy"
       - "/Users/naraptis/.local/bin/objcopy"
       - "/opt/homebrew/bin/objcopy"
       - "/Users/naraptis/Library/Python/3.9/bin/objcopy"
@@ -834,13 +842,13 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/objcopy"
       - "/opt/pmk/env/global/bin/objcopy"
       - "/Library/Apple/usr/bin/objcopy"
-      - "/Applications/Codex.app/Contents/Resources/objcopy"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/objcopy"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/objcopy"
+      - "/opt/anaconda3/bin/objcopy"
+      - "/opt/anaconda3/condabin/objcopy"
     found: false
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -858,9 +866,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "find-v1"
     backtrace:
@@ -882,9 +895,6 @@ events:
       - "readelf"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -900,12 +910,12 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     searched_directories:
       - "/usr/bin/readelf"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/readelf"
-      - "/opt/anaconda3/bin/readelf"
-      - "/opt/anaconda3/condabin/readelf"
       - "/Users/naraptis/.local/bin/readelf"
       - "/opt/homebrew/bin/readelf"
       - "/Users/naraptis/Library/Python/3.9/bin/readelf"
@@ -921,13 +931,13 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/readelf"
       - "/opt/pmk/env/global/bin/readelf"
       - "/Library/Apple/usr/bin/readelf"
-      - "/Applications/Codex.app/Contents/Resources/readelf"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/readelf"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/readelf"
+      - "/opt/anaconda3/bin/readelf"
+      - "/opt/anaconda3/condabin/readelf"
     found: false
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -945,9 +955,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "find-v1"
     backtrace:
@@ -969,9 +984,6 @@ events:
       - "dlltool"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -987,12 +999,12 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     searched_directories:
       - "/usr/bin/dlltool"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/dlltool"
-      - "/opt/anaconda3/bin/dlltool"
-      - "/opt/anaconda3/condabin/dlltool"
       - "/Users/naraptis/.local/bin/dlltool"
       - "/opt/homebrew/bin/dlltool"
       - "/Users/naraptis/Library/Python/3.9/bin/dlltool"
@@ -1008,13 +1020,13 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/dlltool"
       - "/opt/pmk/env/global/bin/dlltool"
       - "/Library/Apple/usr/bin/dlltool"
-      - "/Applications/Codex.app/Contents/Resources/dlltool"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/dlltool"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/dlltool"
+      - "/opt/anaconda3/bin/dlltool"
+      - "/opt/anaconda3/condabin/dlltool"
     found: false
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -1032,9 +1044,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "find-v1"
     backtrace:
@@ -1056,9 +1073,6 @@ events:
       - "addr2line"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -1074,12 +1088,12 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     searched_directories:
       - "/usr/bin/addr2line"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/addr2line"
-      - "/opt/anaconda3/bin/addr2line"
-      - "/opt/anaconda3/condabin/addr2line"
       - "/Users/naraptis/.local/bin/addr2line"
       - "/opt/homebrew/bin/addr2line"
       - "/Users/naraptis/Library/Python/3.9/bin/addr2line"
@@ -1095,13 +1109,13 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/addr2line"
       - "/opt/pmk/env/global/bin/addr2line"
       - "/Library/Apple/usr/bin/addr2line"
-      - "/Applications/Codex.app/Contents/Resources/addr2line"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/addr2line"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/addr2line"
+      - "/opt/anaconda3/bin/addr2line"
+      - "/opt/anaconda3/condabin/addr2line"
     found: false
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -1119,9 +1133,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "find-v1"
     backtrace:
@@ -1143,9 +1162,6 @@ events:
       - "tapi"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -1161,12 +1177,12 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     searched_directories:
       - "/usr/bin/tapi"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/tapi"
-      - "/opt/anaconda3/bin/tapi"
-      - "/opt/anaconda3/condabin/tapi"
       - "/Users/naraptis/.local/bin/tapi"
       - "/opt/homebrew/bin/tapi"
       - "/Users/naraptis/Library/Python/3.9/bin/tapi"
@@ -1182,13 +1198,13 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/tapi"
       - "/opt/pmk/env/global/bin/tapi"
       - "/Library/Apple/usr/bin/tapi"
-      - "/Applications/Codex.app/Contents/Resources/tapi"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi"
+      - "/opt/anaconda3/bin/tapi"
+      - "/opt/anaconda3/condabin/tapi"
     found: false
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -1206,9 +1222,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
   -
     kind: "find-v1"
     backtrace:
@@ -1229,9 +1250,6 @@ events:
     names:
       - "install_name_tool"
     candidate_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -1248,15 +1266,21 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
     searched_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/install_name_tool"
-    found: "/opt/anaconda3/bin/install_name_tool"
+      - "/Users/naraptis/.local/bin/install_name_tool"
+      - "/opt/homebrew/bin/install_name_tool"
+      - "/Users/naraptis/Library/Python/3.9/bin/install_name_tool"
+      - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin/install_name_tool"
+      - "/opt/homebrew/sbin/install_name_tool"
+      - "/usr/local/bin/install_name_tool"
+      - "/System/Cryptexes/App/usr/bin/install_name_tool"
+    found: "/usr/bin/install_name_tool"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -1274,9 +1298,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
   -
     kind: "try_compile-v1"
@@ -1287,8 +1316,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-UzVEYh"
-      binary: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-UzVEYh"
+      source: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-j5c9St"
+      binary: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-j5c9St"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1301,19 +1330,19 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-UzVEYh'
+        Change Dir: '/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-j5c9St'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_30d74/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_30d74.dir/build.make CMakeFiles/cmTC_30d74.dir/build
-        Building CXX object CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -Wl,-v -MD -MT CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_185ff/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_185ff.dir/build.make CMakeFiles/cmTC_185ff.dir/build
+        Building CXX object CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 17.0.0 (clang-1700.3.19.1)
         Target: arm64-apple-darwin25.3.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.0 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-UzVEYh -target-linker-version 1221.4 -v -fcoverage-compilation-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-UzVEYh -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.0 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-j5c9St -target-linker-version 1221.4 -v -fcoverage-compilation-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-j5c9St -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 17.0.0 (clang-1700.3.19.1) default target arm64-apple-darwin25.3.0
         ignoring nonexistent directory "/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
@@ -1327,13 +1356,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_30d74
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30d74.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_185ff
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_185ff.dir/link.txt --verbose=1
         Apple clang version 17.0.0 (clang-1700.3.19.1)
         Target: arm64-apple-darwin25.3.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_30d74 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_185ff -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1221.4
         BUILD 16:29:08 Aug 11 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
@@ -1345,7 +1374,7 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-        /usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_30d74
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_185ff
         
       exitCode: 0
   -
@@ -1389,19 +1418,19 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-UzVEYh']
+        ignore line: [Change Dir: '/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-j5c9St']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_30d74/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_30d74.dir/build.make CMakeFiles/cmTC_30d74.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -Wl -v -MD -MT CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_185ff/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_185ff.dir/build.make CMakeFiles/cmTC_185ff.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 17.0.0 (clang-1700.3.19.1)]
         ignore line: [Target: arm64-apple-darwin25.3.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.0 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-UzVEYh -target-linker-version 1221.4 -v -fcoverage-compilation-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-UzVEYh -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.0 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-j5c9St -target-linker-version 1221.4 -v -fcoverage-compilation-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-j5c9St -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 17.0.0 (clang-1700.3.19.1) default target arm64-apple-darwin25.3.0]
         ignore line: [ignoring nonexistent directory "/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
@@ -1415,13 +1444,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_30d74]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30d74.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_185ff]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_185ff.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 17.0.0 (clang-1700.3.19.1)]
         ignore line: [Target: arm64-apple-darwin25.3.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_30d74 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_185ff -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1438,12 +1467,12 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_30d74] ==> ignore
+          arg [cmTC_185ff] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_30d74.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_185ff.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
@@ -1477,10 +1506,48 @@ events:
       will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
       LTO support using: LLVM version 17.0.0 (static support for 29, runtime is 29)
       TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.3.8)
-...
-
----
-events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:320 (_ipo_run_language_check)"
+      - "CMakeLists.txt:16 (check_ipo_supported)"
+    directories:
+      source: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src"
+      binary: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin"
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile
+        /opt/homebrew/bin/cmake -S/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src -B/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin --check-build-system CMakeFiles/Makefile.cmake 0
+        /opt/homebrew/bin/cmake -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin//CMakeFiles/progress.marks
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/Makefile2 all
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/depend
+        cd /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin && /opt/homebrew/bin/cmake -E cmake_depends "Unix Makefiles" /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/DependInfo.cmake
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/build
+        [ 25%] Building CXX object CMakeFiles/foo.dir/foo.cpp.o
+        /usr/bin/c++   -flto=thin -arch arm64 -MD -MT CMakeFiles/foo.dir/foo.cpp.o -MF CMakeFiles/foo.dir/foo.cpp.o.d -o CMakeFiles/foo.dir/foo.cpp.o -c /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp
+        [ 50%] Linking CXX static library libfoo.a
+        /opt/homebrew/bin/cmake -P CMakeFiles/foo.dir/cmake_clean_target.cmake
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/foo.dir/link.txt --verbose=1
+        "/usr/bin/ar" qc libfoo.a CMakeFiles/foo.dir/foo.cpp.o
+        "/usr/bin/ranlib" libfoo.a
+        [ 50%] Built target foo
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/depend
+        cd /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin && /opt/homebrew/bin/cmake -E cmake_depends "Unix Makefiles" /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/DependInfo.cmake
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/build
+        [ 75%] Building CXX object CMakeFiles/boo.dir/main.cpp.o
+        /usr/bin/c++   -flto=thin -arch arm64 -MD -MT CMakeFiles/boo.dir/main.cpp.o -MF CMakeFiles/boo.dir/main.cpp.o.d -o CMakeFiles/boo.dir/main.cpp.o -c /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src/main.cpp
+        [100%] Linking CXX executable boo
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/boo.dir/link.txt --verbose=1
+        /usr/bin/c++ -flto=thin -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.cpp.o -o boo  libfoo.a
+        [100%] Built target boo
+        /opt/homebrew/bin/cmake -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles 0
+        
+      exitCode: 0
   -
     kind: "try_compile-v1"
     backtrace:
@@ -1492,10 +1559,10 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Dependencies.cmake:38 (_qt_internal_find_third_party_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:180 (include)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     directories:
-      source: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-GAIBQU"
-      binary: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-GAIBQU"
+      source: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-qBOLsN"
+      binary: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-qBOLsN"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1508,15 +1575,15 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-GAIBQU'
+        Change Dir: '/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-qBOLsN'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_fa042/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_fa042.dir/build.make CMakeFiles/cmTC_fa042.dir/build
-        Building CXX object CMakeFiles/cmTC_fa042.dir/src.cxx.o
-        /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -MD -MT CMakeFiles/cmTC_fa042.dir/src.cxx.o -MF CMakeFiles/cmTC_fa042.dir/src.cxx.o.d -o CMakeFiles/cmTC_fa042.dir/src.cxx.o -c /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-GAIBQU/src.cxx
-        Linking CXX executable cmTC_fa042
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa042.dir/link.txt --verbose=1
-        /usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_fa042.dir/src.cxx.o -o cmTC_fa042
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3f5c6/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_3f5c6.dir/build.make CMakeFiles/cmTC_3f5c6.dir/build
+        Building CXX object CMakeFiles/cmTC_3f5c6.dir/src.cxx.o
+        /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_3f5c6.dir/src.cxx.o -MF CMakeFiles/cmTC_3f5c6.dir/src.cxx.o.d -o CMakeFiles/cmTC_3f5c6.dir/src.cxx.o -c /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-qBOLsN/src.cxx
+        Linking CXX executable cmTC_3f5c6
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f5c6.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3f5c6.dir/src.cxx.o -o cmTC_3f5c6
         
       exitCode: 0
   -
@@ -1529,7 +1596,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:42 (_qt_internal_find_tool_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     name: "Qt6CoreTools"
     configs:
       -
@@ -1575,38 +1642,6 @@ events:
         mode: "config"
         reason: "no_exist"
       -
-        path: "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/Qt6CoreToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/qt6coretools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/Qt6CoreToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/qt6coretools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/cmake/Qt6CoreToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/cmake/qt6coretools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/condabin/Qt6CoreToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/condabin/qt6coretools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
         path: "/Users/naraptis/.local/Qt6CoreToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
@@ -1628,9 +1663,6 @@ events:
       version: "6.10.2"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -1648,9 +1680,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -1685,7 +1722,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:42 (_qt_internal_find_tool_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     name: "Qt6GuiTools"
     configs:
       -
@@ -1731,38 +1768,6 @@ events:
         mode: "config"
         reason: "no_exist"
       -
-        path: "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/Qt6GuiToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/qt6guitools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/Qt6GuiToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/qt6guitools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/cmake/Qt6GuiToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/cmake/qt6guitools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/condabin/Qt6GuiToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/condabin/qt6guitools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
         path: "/Users/naraptis/.local/Qt6GuiToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
@@ -1784,9 +1789,6 @@ events:
       version: "6.10.2"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -1804,9 +1806,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -1838,7 +1845,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:42 (_qt_internal_find_tool_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     name: "Qt6WidgetsTools"
     configs:
       -
@@ -1884,38 +1891,6 @@ events:
         mode: "config"
         reason: "no_exist"
       -
-        path: "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/Qt6WidgetsToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/qt6widgetstools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/Qt6WidgetsToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/qt6widgetstools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/cmake/Qt6WidgetsToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/cmake/qt6widgetstools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/condabin/Qt6WidgetsToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/condabin/qt6widgetstools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
         path: "/Users/naraptis/.local/Qt6WidgetsToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
@@ -1937,9 +1912,6 @@ events:
       version: "6.10.2"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -1957,9 +1929,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -1999,12 +1976,12 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-vcbAlY"
-      binary: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-vcbAlY"
+      source: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-brjzJn"
+      binary: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-brjzJn"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2017,15 +1994,15 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: '/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-vcbAlY'
+        Change Dir: '/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-brjzJn'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f5b9e/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f5b9e.dir/build.make CMakeFiles/cmTC_f5b9e.dir/build
-        Building CXX object CMakeFiles/cmTC_f5b9e.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_STDATOMIC  -std=gnu++17 -MD -MT CMakeFiles/cmTC_f5b9e.dir/src.cxx.o -MF CMakeFiles/cmTC_f5b9e.dir/src.cxx.o.d -o CMakeFiles/cmTC_f5b9e.dir/src.cxx.o -c /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-vcbAlY/src.cxx
-        Linking CXX executable cmTC_f5b9e
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5b9e.dir/link.txt --verbose=1
-        /usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f5b9e.dir/src.cxx.o -o cmTC_f5b9e
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8b15b/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_8b15b.dir/build.make CMakeFiles/cmTC_8b15b.dir/build
+        Building CXX object CMakeFiles/cmTC_8b15b.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_STDATOMIC  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_8b15b.dir/src.cxx.o -MF CMakeFiles/cmTC_8b15b.dir/src.cxx.o.d -o CMakeFiles/cmTC_8b15b.dir/src.cxx.o -c /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/CMakeScratch/TryCompile-brjzJn/src.cxx
+        Linking CXX executable cmTC_8b15b
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b15b.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8b15b.dir/src.cxx.o -o cmTC_8b15b
         
       exitCode: 0
   -
@@ -2039,7 +2016,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     mode: "program"
     variable: "MACDEPLOYQT_EXECUTABLE"
     description: "Path to a program."
@@ -2055,9 +2032,6 @@ events:
       - "macdeployqt"
     candidate_directories:
       - "/opt/homebrew/bin/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
       - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin/"
@@ -2073,7 +2047,10 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
@@ -2110,9 +2087,6 @@ events:
     found: "/opt/homebrew/bin/macdeployqt"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -2130,9 +2104,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -2160,7 +2139,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     name: "Qt6Core"
     configs:
       -
@@ -2243,9 +2222,6 @@ events:
       version: "6.10.2"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -2263,9 +2239,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -2304,7 +2285,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     mode: "library"
     variable: "OPENGL_gl_LIBRARY"
     description: "OpenGL GL library"
@@ -2320,9 +2301,6 @@ events:
       - "OpenGL"
       - "GL"
     candidate_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -2335,7 +2313,10 @@ events:
       - "/usr/sbin/"
       - "/sbin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
       - "/opt/homebrew/lib/"
@@ -2352,9 +2333,6 @@ events:
     found: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -2372,9 +2350,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -2415,7 +2398,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     mode: "library"
     variable: "OPENGL_glu_LIBRARY"
     description: "OpenGL GLU library"
@@ -2431,9 +2414,6 @@ events:
       - "OpenGL"
       - "GLU"
     candidate_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -2446,7 +2426,10 @@ events:
       - "/usr/sbin/"
       - "/sbin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
       - "/opt/homebrew/lib/"
@@ -2463,9 +2446,6 @@ events:
     found: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -2483,9 +2463,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -2526,7 +2511,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     mode: "path"
     variable: "OPENGL_INCLUDE_DIR"
     description: "Include for OpenGL"
@@ -2542,9 +2527,6 @@ events:
       - "OpenGL/gl.h"
       - "GL/gl.h"
     candidate_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -2561,7 +2543,10 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
       - "/opt/homebrew/include/"
@@ -2592,9 +2577,6 @@ events:
       - "/Network/Library/Frameworks/"
       - "/System/Library/Frameworks/"
     searched_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/OpenGL.framework/Headers/gl.h"
-      - "/opt/anaconda3/bin/OpenGL.framework/Headers/gl.h"
-      - "/opt/anaconda3/condabin/OpenGL.framework/Headers/gl.h"
       - "/Users/naraptis/.local/bin/OpenGL.framework/Headers/gl.h"
       - "/opt/homebrew/bin/OpenGL.framework/Headers/gl.h"
       - "/Users/naraptis/Library/Python/3.9/bin/OpenGL.framework/Headers/gl.h"
@@ -2611,7 +2593,10 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/OpenGL.framework/Headers/gl.h"
       - "/opt/pmk/env/global/bin/OpenGL.framework/Headers/gl.h"
       - "/Library/Apple/usr/bin/OpenGL.framework/Headers/gl.h"
-      - "/Applications/Codex.app/Contents/Resources/OpenGL.framework/Headers/gl.h"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/OpenGL.framework/Headers/gl.h"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/OpenGL.framework/Headers/gl.h"
+      - "/opt/anaconda3/bin/OpenGL.framework/Headers/gl.h"
+      - "/opt/anaconda3/condabin/OpenGL.framework/Headers/gl.h"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/OpenGL.framework/Headers/gl.h"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/OpenGL.framework/Headers/gl.h"
       - "/opt/homebrew/include/OpenGL.framework/Headers/gl.h"
@@ -2638,9 +2623,6 @@ events:
     found: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -2658,9 +2640,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -2701,7 +2688,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     mode: "path"
     variable: "OPENGL_GLU_INCLUDE_DIR"
     description: "Include for the OpenGL GLU library"
@@ -2717,9 +2704,6 @@ events:
       - "OpenGL/glu.h"
       - "GL/glu.h"
     candidate_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -2736,7 +2720,10 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
       - "/opt/homebrew/include/"
@@ -2767,9 +2754,6 @@ events:
       - "/Network/Library/Frameworks/"
       - "/System/Library/Frameworks/"
     searched_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/OpenGL.framework/Headers/glu.h"
-      - "/opt/anaconda3/bin/OpenGL.framework/Headers/glu.h"
-      - "/opt/anaconda3/condabin/OpenGL.framework/Headers/glu.h"
       - "/Users/naraptis/.local/bin/OpenGL.framework/Headers/glu.h"
       - "/opt/homebrew/bin/OpenGL.framework/Headers/glu.h"
       - "/Users/naraptis/Library/Python/3.9/bin/OpenGL.framework/Headers/glu.h"
@@ -2786,7 +2770,10 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/OpenGL.framework/Headers/glu.h"
       - "/opt/pmk/env/global/bin/OpenGL.framework/Headers/glu.h"
       - "/Library/Apple/usr/bin/OpenGL.framework/Headers/glu.h"
-      - "/Applications/Codex.app/Contents/Resources/OpenGL.framework/Headers/glu.h"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/OpenGL.framework/Headers/glu.h"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/OpenGL.framework/Headers/glu.h"
+      - "/opt/anaconda3/bin/OpenGL.framework/Headers/glu.h"
+      - "/opt/anaconda3/condabin/OpenGL.framework/Headers/glu.h"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/OpenGL.framework/Headers/glu.h"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/OpenGL.framework/Headers/glu.h"
       - "/opt/homebrew/include/OpenGL.framework/Headers/glu.h"
@@ -2813,9 +2800,6 @@ events:
     found: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -2833,9 +2817,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -2875,7 +2864,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     mode: "path"
     variable: "Vulkan_INCLUDE_DIR"
     description: "Path to a file."
@@ -2891,9 +2880,6 @@ events:
       - "vulkan/vulkan.h"
     candidate_directories:
       - "/include/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -2910,7 +2896,10 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
       - "/opt/homebrew/include/"
@@ -2942,9 +2931,6 @@ events:
       - "/System/Library/Frameworks/"
     searched_directories:
       - "/include/vulkan.framework/Headers/vulkan.h"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/vulkan.framework/Headers/vulkan.h"
-      - "/opt/anaconda3/bin/vulkan.framework/Headers/vulkan.h"
-      - "/opt/anaconda3/condabin/vulkan.framework/Headers/vulkan.h"
       - "/Users/naraptis/.local/bin/vulkan.framework/Headers/vulkan.h"
       - "/opt/homebrew/bin/vulkan.framework/Headers/vulkan.h"
       - "/Users/naraptis/Library/Python/3.9/bin/vulkan.framework/Headers/vulkan.h"
@@ -2961,7 +2947,10 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/vulkan.framework/Headers/vulkan.h"
       - "/opt/pmk/env/global/bin/vulkan.framework/Headers/vulkan.h"
       - "/Library/Apple/usr/bin/vulkan.framework/Headers/vulkan.h"
-      - "/Applications/Codex.app/Contents/Resources/vulkan.framework/Headers/vulkan.h"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/vulkan.framework/Headers/vulkan.h"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/vulkan.framework/Headers/vulkan.h"
+      - "/opt/anaconda3/bin/vulkan.framework/Headers/vulkan.h"
+      - "/opt/anaconda3/condabin/vulkan.framework/Headers/vulkan.h"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/vulkan.framework/Headers/vulkan.h"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/vulkan.framework/Headers/vulkan.h"
       - "/opt/homebrew/include/vulkan.framework/Headers/vulkan.h"
@@ -2992,9 +2981,6 @@ events:
       - "/Network/Library/Frameworks/vulkan.framework/Headers/vulkan.h"
       - "/System/Library/Frameworks/vulkan.framework/Headers/vulkan.h"
       - "/include/vulkan/vulkan.h"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/vulkan/vulkan.h"
-      - "/opt/anaconda3/bin/vulkan/vulkan.h"
-      - "/opt/anaconda3/condabin/vulkan/vulkan.h"
       - "/Users/naraptis/.local/bin/vulkan/vulkan.h"
       - "/opt/homebrew/bin/vulkan/vulkan.h"
       - "/Users/naraptis/Library/Python/3.9/bin/vulkan/vulkan.h"
@@ -3011,7 +2997,10 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/vulkan/vulkan.h"
       - "/opt/pmk/env/global/bin/vulkan/vulkan.h"
       - "/Library/Apple/usr/bin/vulkan/vulkan.h"
-      - "/Applications/Codex.app/Contents/Resources/vulkan/vulkan.h"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/vulkan/vulkan.h"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/vulkan/vulkan.h"
+      - "/opt/anaconda3/bin/vulkan/vulkan.h"
+      - "/opt/anaconda3/condabin/vulkan/vulkan.h"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/vulkan/vulkan.h"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/vulkan/vulkan.h"
       - "/opt/homebrew/include/vulkan/vulkan.h"
@@ -3044,9 +3033,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -3064,9 +3050,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -3106,7 +3097,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     mode: "library"
     variable: "Vulkan_LIBRARY"
     description: "Path to a library."
@@ -3121,9 +3112,6 @@ events:
     names:
       - "vulkan"
     candidate_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -3136,7 +3124,10 @@ events:
       - "/usr/sbin/"
       - "/sbin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
       - "/opt/homebrew/lib/"
@@ -3151,9 +3142,6 @@ events:
       - "/Library/Frameworks/"
       - "/System/Library/Frameworks/"
     searched_directories:
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -3166,7 +3154,10 @@ events:
       - "/usr/sbin/"
       - "/sbin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
       - "/opt/homebrew/lib/"
@@ -3183,9 +3174,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -3203,9 +3191,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -3245,7 +3238,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     mode: "program"
     variable: "Vulkan_GLSLC_EXECUTABLE"
     description: "Path to a program."
@@ -3261,9 +3254,6 @@ events:
       - "glslc"
     candidate_directories:
       - "/bin/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -3279,7 +3269,10 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
@@ -3315,9 +3308,6 @@ events:
       - "/Applications/Xcode.app/Contents/Developer/Applications/"
     searched_directories:
       - "/bin/glslc"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/glslc"
-      - "/opt/anaconda3/bin/glslc"
-      - "/opt/anaconda3/condabin/glslc"
       - "/Users/naraptis/.local/bin/glslc"
       - "/opt/homebrew/bin/glslc"
       - "/Users/naraptis/Library/Python/3.9/bin/glslc"
@@ -3333,7 +3323,10 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/glslc"
       - "/opt/pmk/env/global/bin/glslc"
       - "/Library/Apple/usr/bin/glslc"
-      - "/Applications/Codex.app/Contents/Resources/glslc"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/glslc"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/glslc"
+      - "/opt/anaconda3/bin/glslc"
+      - "/opt/anaconda3/condabin/glslc"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/glslc"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/glslc"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/glslc"
@@ -3370,9 +3363,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -3390,9 +3380,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -3425,7 +3420,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     mode: "program"
     variable: "Vulkan_GLSLANG_VALIDATOR_EXECUTABLE"
     description: "Path to a program."
@@ -3441,9 +3436,6 @@ events:
       - "glslangValidator"
     candidate_directories:
       - "/bin/"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/"
-      - "/opt/anaconda3/bin/"
-      - "/opt/anaconda3/condabin/"
       - "/Users/naraptis/.local/bin/"
       - "/opt/homebrew/bin/"
       - "/Users/naraptis/Library/Python/3.9/bin/"
@@ -3459,7 +3451,10 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
       - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
-      - "/Applications/Codex.app/Contents/Resources/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/opt/anaconda3/bin/"
+      - "/opt/anaconda3/condabin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
@@ -3495,9 +3490,6 @@ events:
       - "/Applications/Xcode.app/Contents/Developer/Applications/"
     searched_directories:
       - "/bin/glslangValidator"
-      - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/glslangValidator"
-      - "/opt/anaconda3/bin/glslangValidator"
-      - "/opt/anaconda3/condabin/glslangValidator"
       - "/Users/naraptis/.local/bin/glslangValidator"
       - "/opt/homebrew/bin/glslangValidator"
       - "/Users/naraptis/Library/Python/3.9/bin/glslangValidator"
@@ -3513,7 +3505,10 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/glslangValidator"
       - "/opt/pmk/env/global/bin/glslangValidator"
       - "/Library/Apple/usr/bin/glslangValidator"
-      - "/Applications/Codex.app/Contents/Resources/glslangValidator"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/glslangValidator"
+      - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/glslangValidator"
+      - "/opt/anaconda3/bin/glslangValidator"
+      - "/opt/anaconda3/condabin/glslangValidator"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/glslangValidator"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/glslangValidator"
       - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/glslangValidator"
@@ -3550,9 +3545,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -3570,9 +3562,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -3607,7 +3604,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     name: "Qt6DBusTools"
     configs:
       -
@@ -3653,38 +3650,6 @@ events:
         mode: "config"
         reason: "no_exist"
       -
-        path: "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/Qt6DBusToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/qt6dbustools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/Qt6DBusToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/qt6dbustools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/cmake/Qt6DBusToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/cmake/qt6dbustools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/condabin/Qt6DBusToolsConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/condabin/qt6dbustools-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
         path: "/Users/naraptis/.local/Qt6DBusToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
@@ -3706,9 +3671,6 @@ events:
       version: "6.10.2"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -3726,9 +3688,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -3765,7 +3732,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     name: "Qt6DBus"
     configs:
       -
@@ -3824,9 +3791,6 @@ events:
       version: "6.10.2"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -3844,9 +3808,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -3879,7 +3848,7 @@ events:
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:50 (_qt_internal_find_qt_dependencies)"
       - "/opt/homebrew/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:40 (include)"
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     name: "Qt6Gui"
     configs:
       -
@@ -3946,9 +3915,6 @@ events:
       version: "6.10.2"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -3966,9 +3932,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -3997,7 +3968,7 @@ events:
     kind: "find_package-v1"
     backtrace:
       - "/opt/homebrew/lib/cmake/Qt6/Qt6Config.cmake:241 (find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     name: "Qt6Widgets"
     configs:
       -
@@ -4069,9 +4040,6 @@ events:
       version: "6.10.2"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -4089,9 +4057,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -4119,7 +4092,7 @@ events:
   -
     kind: "find_package-v1"
     backtrace:
-      - "CMakeLists.txt:26 (find_package)"
+      - "CMakeLists.txt:45 (find_package)"
     name: "Qt6"
     components:
       -
@@ -4162,1222 +4135,6 @@ events:
         reason: "no_exist"
       -
         path: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/pkgRedirects/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/cmake/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/cmake/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlImportScanner/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlImportScanner/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickVectorImageGeneratorPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlNetwork/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlNetwork/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Tools/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Tools/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlLocalStorage/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlLocalStorage/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2BasicStyleImpl/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2BasicStyleImpl/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2FusionStyleImpl/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2FusionStyleImpl/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlXmlListModel/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlXmlListModel/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlIntegrationPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlIntegrationPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlWorkerScript/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlWorkerScript/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2FusionStyleImplPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2FusionStyleImplPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6PdfWidgetsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6PdfWidgetsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlWorkerScriptPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlWorkerScriptPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsAnimation/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsAnimation/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6PdfQuickPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6PdfQuickPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2Universal/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2Universal/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2Fusion/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2Fusion/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickDialogs2QuickImpl/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickDialogs2QuickImpl/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2Imagine/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2Imagine/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebSockets/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebSockets/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickShapesPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickShapesPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6UiToolsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6UiToolsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickLayoutsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickLayoutsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2BasicStyleImplPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2BasicStyleImplPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6ShaderToolsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6ShaderToolsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6UiPlugin/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6UiPlugin/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickEffectsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickEffectsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6DesignerComponentsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6DesignerComponentsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlAssetDownloaderPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlAssetDownloaderPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlCore/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlCore/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6HelpPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6HelpPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6SvgPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6SvgPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6DesignerPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6DesignerPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Gui/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Gui/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlAssetDownloader/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlAssetDownloader/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlToolingSettingsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlToolingSettingsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlDebugPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlDebugPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineQuickDelegatesQmlPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineQuickDelegatesQmlPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6SvgWidgets/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6SvgWidgets/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlModelsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlModelsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineQuick/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineQuick/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2UniversalPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2UniversalPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickDialogs2UtilsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickDialogs2UtilsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebChannelPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebChannelPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsAnimationPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsAnimationPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6BuildInternals/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6BuildInternals/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlDomPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlDomPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Quick/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Quick/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2MaterialStyleImpl/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2MaterialStyleImpl/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Designer/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Designer/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickTools/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickTools/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickDialogs2Utils/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickDialogs2Utils/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QDocCatchConversionsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QDocCatchConversionsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlMeta/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlMeta/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2Private/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2Private/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlTypeRegistrarPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlTypeRegistrarPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebChannelQuickPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebChannelQuickPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsWavefrontMesh/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsWavefrontMesh/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2FluentWinUI3StyleImpl/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2FluentWinUI3StyleImpl/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2Basic/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2Basic/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsSharedImage/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsSharedImage/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QDocCatchPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QDocCatchPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlCompiler/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlCompiler/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6PdfPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6PdfPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Pdf/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Pdf/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsPlatform/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsPlatform/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsFolderListModel/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsFolderListModel/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlXmlListModelPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlXmlListModelPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2UniversalStyleImplPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2UniversalStyleImplPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlNetworkPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlNetworkPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlIntegration/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlIntegration/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2IOSStyleImplPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2IOSStyleImplPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsWavefrontMeshPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsWavefrontMeshPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickLayouts/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickLayouts/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlCorePrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlCorePrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6SvgWidgetsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6SvgWidgetsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickDialogs2Private/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickDialogs2Private/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2MaterialPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2MaterialPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LinguistTools/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LinguistTools/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickVectorImage/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickVectorImage/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsSettingsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsSettingsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlMetaPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlMetaPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickTestUtilsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickTestUtilsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickTest/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickTest/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineCoreTools/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineCoreTools/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2Material/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2Material/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickDialogs2QuickImplPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickDialogs2QuickImplPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickDialogs2/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickDialogs2/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineCorePrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineCorePrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebSocketsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebSocketsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebChannel/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebChannel/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Help/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Help/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsPlatformPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsPlatformPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2IOSStyleImpl/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2IOSStyleImpl/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2BasicPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2BasicPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineQuickDelegatesQml/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineQuickDelegatesQml/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2MacOSStyleImpl/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2MacOSStyleImpl/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickWidgetsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickWidgetsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2MacOSStyleImplPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2MacOSStyleImplPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControlsTestUtilsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControlsTestUtilsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2ImagineStyleImplPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2ImagineStyleImplPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsQmlModels/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsQmlModels/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickVectorImagePrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickVectorImagePrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6ShaderToolsTools/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6ShaderToolsTools/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2ImplPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2ImplPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2FusionPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2FusionPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Linguist/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Linguist/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineCore/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineCore/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6ToolsTools/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6ToolsTools/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2Impl/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2Impl/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6UiTools/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6UiTools/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsSettings/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsSettings/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2ImaginePrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2ImaginePrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsFolderListModelPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsFolderListModelPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickEffects/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickEffects/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsSharedImagePrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsSharedImagePrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineQuickPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineQuickPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickParticlesPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickParticlesPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickTemplates2Private/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickTemplates2Private/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsQmlModelsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6LabsQmlModelsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Qml/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Qml/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6PdfQuick/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6PdfQuick/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlTools/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlTools/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebChannelQuick/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebChannelQuick/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6PdfWidgets/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6PdfWidgets/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2UniversalStyleImpl/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2UniversalStyleImpl/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2MaterialStyleImplPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2MaterialStyleImplPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2FluentWinUI3StyleImplPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2FluentWinUI3StyleImplPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineWidgetsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineWidgetsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickTemplates2/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickTemplates2/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2ImagineStyleImpl/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickControls2ImagineStyleImpl/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlCompilerPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlCompilerPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6ShaderTools/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6ShaderTools/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlModels/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlModels/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlLocalStoragePrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlLocalStoragePrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineWidgets/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6WebEngineWidgets/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Svg/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6Svg/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QDocCatchGeneratorsPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QDocCatchGeneratorsPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickTestPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickTestPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6PacketProtocolPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6PacketProtocolPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickWidgets/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QuickWidgets/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlFormatPrivate/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/cmake/Qt6QmlFormatPrivate/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/qt6/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/lib/qt6/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/share/qt6/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/share/qt6/qt6-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/condabin/Qt6Config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/anaconda3/condabin/qt6-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
@@ -6458,9 +5215,6 @@ events:
       version: "6.10.2"
     search_context:
       ENV{PATH}:
-        - "/Users/naraptis/.codex/tmp/arg0/codex-arg0hLS7wg"
-        - "/opt/anaconda3/bin"
-        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
         - "/opt/homebrew/bin"
         - "/Users/naraptis/Library/Python/3.9/bin"
@@ -6478,9 +5232,14 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
         - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/naraptis/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/opt/anaconda3/bin"
+        - "/opt/anaconda3/condabin"
         - "/Users/naraptis/.local/bin"
+        - "/Users/naraptis/Library/Python/3.9/bin"
+        - "/Users/naraptis/.nvm/versions/node/v22.17.0/bin"
         - "/Users/naraptis/.local/bin"
-        - "/Applications/Codex.app/Contents/Resources"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
@@ -6509,6 +5268,52 @@ events:
         - "/opt/homebrew/lib/cmake/Qt6"
         - "/opt/homebrew/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules"
         - "/opt/homebrew/lib/cmake/Qt6/3rdparty/kwin"
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:320 (_ipo_run_language_check)"
+      - "CMakeLists.txt:16 (check_ipo_supported)"
+    directories:
+      source: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src"
+      binary: "/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin"
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile
+        /opt/homebrew/bin/cmake -S/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src -B/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin --check-build-system CMakeFiles/Makefile.cmake 0
+        /opt/homebrew/bin/cmake -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin//CMakeFiles/progress.marks
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/Makefile2 all
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/depend
+        cd /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin && /opt/homebrew/bin/cmake -E cmake_depends "Unix Makefiles" /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/DependInfo.cmake
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/build
+        [ 25%] Building CXX object CMakeFiles/foo.dir/foo.cpp.o
+        /usr/bin/c++   -flto=thin -arch arm64 -MD -MT CMakeFiles/foo.dir/foo.cpp.o -MF CMakeFiles/foo.dir/foo.cpp.o.d -o CMakeFiles/foo.dir/foo.cpp.o -c /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp
+        [ 50%] Linking CXX static library libfoo.a
+        /opt/homebrew/bin/cmake -P CMakeFiles/foo.dir/cmake_clean_target.cmake
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/foo.dir/link.txt --verbose=1
+        "/usr/bin/ar" qc libfoo.a CMakeFiles/foo.dir/foo.cpp.o
+        "/usr/bin/ranlib" libfoo.a
+        [ 50%] Built target foo
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/depend
+        cd /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin && /opt/homebrew/bin/cmake -E cmake_depends "Unix Makefiles" /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/DependInfo.cmake
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/build
+        [ 75%] Building CXX object CMakeFiles/boo.dir/main.cpp.o
+        /usr/bin/c++   -flto=thin -arch arm64 -MD -MT CMakeFiles/boo.dir/main.cpp.o -MF CMakeFiles/boo.dir/main.cpp.o.d -o CMakeFiles/boo.dir/main.cpp.o -c /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/src/main.cpp
+        [100%] Linking CXX executable boo
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/boo.dir/link.txt --verbose=1
+        /usr/bin/c++ -flto=thin -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.cpp.o -o boo  libfoo.a
+        [100%] Built target boo
+        /opt/homebrew/bin/cmake -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles 0
+        
+      exitCode: 0
 ...
 
 ---

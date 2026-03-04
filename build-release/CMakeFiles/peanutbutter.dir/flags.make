@@ -6,5 +6,7 @@ CXX_DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
 
 CXX_INCLUDES = -I/Users/naraptis/Desktop/PeanutButter/src -isystem /opt/homebrew/lib/QtWidgets.framework/Headers -iframework /opt/homebrew/lib -isystem /opt/homebrew/lib/QtCore.framework/Headers -isystem /opt/homebrew/share/qt/mkspecs/macx-clang -isystem /opt/homebrew/include -isystem /opt/homebrew/lib/QtGui.framework/Headers
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -flto=thin -O3 -march=native
+CXX_FLAGSarm64 = -O3 -DNDEBUG -std=gnu++17 -flto=thin -arch arm64 -O3 -march=native
+
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -flto=thin -arch arm64 -O3 -march=native
 

@@ -283,9 +283,24 @@ int main(int argc, char* argv[]) {
   };
 
   auto has_meaningful_entries = [&](const fs::path& dir) {
-    for (const auto& entry : fs::directory_iterator(dir)) {
-      if (!is_ignorable_metadata(entry.path())) {
-        return true;
+    std::vector<fs::path> stack;
+    stack.push_back(dir);
+
+    while (!stack.empty()) {
+      const fs::path current = stack.back();
+      stack.pop_back();
+
+      for (const auto& entry : fs::directory_iterator(current)) {
+        const fs::path entry_path = entry.path();
+        if (is_ignorable_metadata(entry_path)) {
+          continue;
+        }
+        if (entry.is_regular_file()) {
+          return true;
+        }
+        if (entry.is_directory()) {
+          stack.push_back(entry_path);
+        }
       }
     }
     return false;
@@ -302,7 +317,6 @@ int main(int argc, char* argv[]) {
         throw std::runtime_error("Failed to clear destination entry: " + entry.path().string() + " (" + ec.message() + ")");
       }
     }
-    append_log("Cleared destination directory: " + QString::fromStdString(dir.string()));
   };
 
   layout->addWidget(source_clear_button, 0, 0);
@@ -388,10 +402,10 @@ int main(int argc, char* argv[]) {
       }
       const fs::path input = source_edit->text().toStdString();
       const fs::path output = archive_edit->text().toStdString();
-      if (!fs::exists(input) || !fs::is_directory(input) || !has_meaningful_entries(input)) {
+      if (!fs::exists(input) || !fs::is_directory(input)) {
         QMessageBox::critical(&window,
                               "snowstorm",
-                              QString("Pack source directory is missing or empty:\n%1")
+                              QString("Pack source directory is missing:\n%1")
                                   .arg(QString::fromStdString(input.string())));
         return;
       }
@@ -417,18 +431,26 @@ int main(int argc, char* argv[]) {
           append_log("Pack canceled by user.");
           return;
         }
-        clear_directory_contents(should.mResolvedDestination);
-      }
-
-      if (preflight_snowstorm.shouldBundle(input, output).mDecision != ShouldBundleDecision::Yes) {
-        QMessageBox::critical(&window, "snowstorm", "Pack preflight did not resolve to YES.");
-        return;
       }
       set_busy(true);
       append_log("Pack started.");
+      const bool clear_destination = (should.mDecision == ShouldBundleDecision::Prompt);
+      const fs::path clear_destination_path = should.mResolvedDestination;
 
-      std::thread([&, input, output, password_1, password_2]() {
+      std::thread([&, input, output, password_1, password_2, clear_destination, clear_destination_path]() {
         try {
+          if (!has_meaningful_entries(input)) {
+            throw std::runtime_error("Pack source directory is missing or empty: " + input.string());
+          }
+          if (clear_destination) {
+            clear_directory_contents(clear_destination_path);
+            const QString line = "Cleared destination directory: " + QString::fromStdString(clear_destination_path.string());
+            QMetaObject::invokeMethod(
+                &window,
+                [&, line]() { append_log(line); },
+                Qt::QueuedConnection);
+          }
+
           SandStorm worker_crypt(gBlockSize, password_1, password_2);
           SnowStorm worker_snowstorm(gBlockSize, gArchiveSize, &worker_crypt);
           const BundleStats stats = worker_snowstorm.bundle(
@@ -478,10 +500,10 @@ int main(int argc, char* argv[]) {
       }
       const fs::path input = archive_edit->text().toStdString();
       const fs::path output = unarchive_edit->text().toStdString();
-      if (!fs::exists(input) || !fs::is_directory(input) || !has_meaningful_entries(input)) {
+      if (!fs::exists(input) || !fs::is_directory(input)) {
         QMessageBox::critical(&window,
                               "snowstorm",
-                              QString("Unpack source directory is missing or empty:\n%1")
+                              QString("Unpack source directory is missing:\n%1")
                                   .arg(QString::fromStdString(input.string())));
         return;
       }
@@ -507,18 +529,26 @@ int main(int argc, char* argv[]) {
           append_log("Unpack canceled by user.");
           return;
         }
-        clear_directory_contents(should.mResolvedDestination);
-      }
-
-      if (preflight_snowstorm.shouldUnbundle(input, output).mDecision != ShouldBundleDecision::Yes) {
-        QMessageBox::critical(&window, "snowstorm", "Unpack preflight did not resolve to YES.");
-        return;
       }
       set_busy(true);
       append_log("Unpack started.");
+      const bool clear_destination = (should.mDecision == ShouldBundleDecision::Prompt);
+      const fs::path clear_destination_path = should.mResolvedDestination;
 
-      std::thread([&, input, output, password_1, password_2]() {
+      std::thread([&, input, output, password_1, password_2, clear_destination, clear_destination_path]() {
         try {
+          if (!has_meaningful_entries(input)) {
+            throw std::runtime_error("Unpack source directory is missing or empty: " + input.string());
+          }
+          if (clear_destination) {
+            clear_directory_contents(clear_destination_path);
+            const QString line = "Cleared destination directory: " + QString::fromStdString(clear_destination_path.string());
+            QMetaObject::invokeMethod(
+                &window,
+                [&, line]() { append_log(line); },
+                Qt::QueuedConnection);
+          }
+
           SandStorm worker_crypt(gBlockSize, password_1, password_2);
           SnowStorm worker_snowstorm(gBlockSize, gArchiveSize, &worker_crypt);
           const UnbundleStats stats = worker_snowstorm.unbundle(

@@ -6,5 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/naraptis/Desktop/PeanutButter/src
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -flto=thin -O3 -march=native
+CXX_FLAGSarm64 = -O3 -DNDEBUG -std=gnu++17 -flto=thin -arch arm64 -O3 -march=native
+
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -flto=thin -arch arm64 -O3 -march=native
 

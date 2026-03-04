@@ -191,16 +191,6 @@ ShouldBundleResult SnowStorm::shouldBundle(const fs::path& pSource,
     return aResult;
   }
 
-  const SnowStormCountResult aCounts = countDirectory(pSource);
-  const std::uint64_t aArchiveCount = std::max<std::uint64_t>(1, (aCounts.mPayloadBytes + mStorageFileSize - 1) / mStorageFileSize);
-  const std::uint64_t aRequiredBytes = aArchiveCount * mStorageFileSize + mStorageFileSize;
-  const fs::space_info aSpace = fs::space(aOutputDirectory, aErrorCode);
-  if (!aErrorCode && aSpace.available < aRequiredBytes) {
-    aResult.mDecision = ShouldBundleDecision::No;
-    aResult.mMessage = "Insufficient disk space for bundle";
-    return aResult;
-  }
-
   aResult.mDecision = ShouldBundleDecision::Yes;
   aResult.mMessage = "OK";
   return aResult;
@@ -219,6 +209,12 @@ BundleStats SnowStorm::bundle(const fs::path& pSource,
 
   const SnowStormCountResult aCounts = countDirectory(pSource);
   const std::uint64_t aArchiveCount = std::max<std::uint64_t>(1, (aCounts.mPayloadBytes + mStorageFileSize - 1) / mStorageFileSize);
+  std::error_code aErrorCode;
+  const fs::space_info aSpace = fs::space(aOutputDirectory, aErrorCode);
+  const std::uint64_t aRequiredBytes = aArchiveCount * mStorageFileSize + mStorageFileSize;
+  if (!aErrorCode && aSpace.available < aRequiredBytes) {
+    throw std::runtime_error("Insufficient disk space for bundle");
+  }
 
   std::uint64_t aFilesDone = 0;
   SnowStormBundleWriter aWriter(*this, aOutputDirectory, aArchiveCount, std::move(pSnowStormProgressMethod), aCounts.mFileCount);
