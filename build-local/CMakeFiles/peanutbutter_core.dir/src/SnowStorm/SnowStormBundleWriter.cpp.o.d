@@ -812,6 +812,9 @@ CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
   /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStorm.hpp \
-  /Users/naraptis/Desktop/PeanutButter/src/Encryptable.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/SandStorm/EncryptionLayer.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/SandStorm/Cipher.hpp \
   /Users/naraptis/Desktop/PeanutButter/src/ShouldBundleResult.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/Crypt.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/Globals.hpp \
   /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormUtils.hpp

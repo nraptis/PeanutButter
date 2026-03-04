@@ -810,11 +810,16 @@ CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-  /Users/naraptis/Desktop/PeanutButter/src/Encryptable.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/SandStorm/EncryptionLayer.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/SandStorm/Cipher.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleStats.hpp \
   /Users/naraptis/Desktop/PeanutButter/src/ShouldBundleResult.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
   /Users/naraptis/Desktop/PeanutButter/src/Globals.hpp \
-  /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleReader.hpp \
-  /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleWriter.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundlePackerBackward.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundlePackerForward.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleSealerBackward.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleSealerForward.hpp \
   /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormCountResult.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormEngine.hpp \
   /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormUtils.hpp

@@ -1,12 +1,21 @@
 #pragma once
 
-#include <cstddef>
+#include <cstdint>
+#include <string>
 
-class TaylorCipher {
+#include "Cipher.hpp"
+
+class TaylorCipher : public Cipher {
 public:
   TaylorCipher() = default;
 
-  void transformWindow(const unsigned char* pSource,
-                       unsigned char* pDestination,
-                       std::size_t pLength) const;
+  bool encrypt(const unsigned char* pSource,
+               unsigned char* pDestination,
+               std::uint64_t pSize,
+               std::string* pError) override;
+
+  bool decrypt(const unsigned char* pSource,
+               unsigned char* pDestination,
+               std::uint64_t pSize,
+               std::string* pError) override;
 };

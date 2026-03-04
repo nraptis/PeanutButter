@@ -1,0 +1,27 @@
+Start testing: Mar 04 16:59 EST
+----------------------------------------------------------
+1/1 Testing: peanutbutter_tests
+1/1 Test: peanutbutter_tests
+Command: "/Users/naraptis/Desktop/PeanutButter/build-local/peanutbutter_tests"
+Directory: /Users/naraptis/Desktop/PeanutButter/build-local
+"peanutbutter_tests" start time: Mar 04 16:59 EST
+Output:
+----------------------------------------------------------
+[PASS] shouldBundle missing source => No
+[PASS] shouldBundle destination file => No
+[PASS] shouldBundle non-empty destination => Prompt
+[PASS] plain destination resolves near input
+[PASS] bundle/unbundle roundtrip nested + empty files
+[PASS] shouldUnbundle source file => No
+[PASS] unbundle ambiguous archive groups throws
+[PASS] unbundle truncated archive throws
+All tests passed (8)
+<end of output>
+Test time =   0.31 sec
+----------------------------------------------------------
+Test Passed.
+"peanutbutter_tests" end time: Mar 04 16:59 EST
+"peanutbutter_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 04 16:59 EST

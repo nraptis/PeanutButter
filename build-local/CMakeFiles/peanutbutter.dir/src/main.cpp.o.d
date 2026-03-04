@@ -1113,9 +1113,11 @@ CMakeFiles/peanutbutter.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/thread.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream \
   /Users/naraptis/Desktop/PeanutButter/src/ConfigLoader.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/Crypt.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/SandStorm/EncryptionLayer.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/SandStorm/Cipher.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/FileCompare.hpp \
   /Users/naraptis/Desktop/PeanutButter/src/Globals.hpp \
-  /Users/naraptis/Desktop/PeanutButter/src/SandStorm/SandStorm.hpp \
-  /Users/naraptis/Desktop/PeanutButter/src/Encryptable.hpp \
-  /Users/naraptis/Desktop/PeanutButter/src/SandStorm/TaylorCipher.hpp \
-  /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStorm.hpp \
-  /Users/naraptis/Desktop/PeanutButter/src/ShouldBundleResult.hpp
+  /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormEngine.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/ShouldBundleResult.hpp \
+  /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleStats.hpp

@@ -21,6 +21,14 @@ std::string bundleName(std::uint64_t pIndex) {
   return std::string("snowstorm_") + aIndexText + ".jag";
 }
 
+bool hasMeaningfulEntries(const fs::path& pDirectory) {
+  for (const auto& aEntry : fs::directory_iterator(pDirectory)) {
+    (void)aEntry;
+    return true;
+  }
+  return false;
+}
+
 void writeUInt16(std::vector<char>& pOut, std::uint16_t pValue) {
   pOut.push_back(static_cast<char>(pValue & 0xFF));
   pOut.push_back(static_cast<char>((pValue >> 8) & 0xFF));

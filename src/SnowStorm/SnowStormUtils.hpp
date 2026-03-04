@@ -11,6 +11,7 @@ namespace fs = std::filesystem;
 
 bool shouldIgnoreEntry(const fs::path& pPath);
 std::string bundleName(std::uint64_t pIndex);
+bool hasMeaningfulEntries(const fs::path& pDirectory);
 
 void writeUInt16(std::vector<char>& pOut, std::uint16_t pValue);
 void writeUInt64(std::vector<char>& pOut, std::uint64_t pValue);

@@ -33,9 +33,10 @@
 #include <vector>
 
 #include "ConfigLoader.hpp"
+#include "Crypt.hpp"
+#include "FileCompare.hpp"
 #include "Globals.hpp"
-#include "SandStorm/SandStorm.hpp"
-#include "SnowStorm/SnowStorm.hpp"
+#include "SnowStorm/SnowStormEngine.hpp"
 
 namespace fs = std::filesystem;
 
@@ -52,16 +53,6 @@ fs::path inferredBaseDirectory() {
     return fs::current_path();
   }
   return fs::path(QCoreApplication::applicationDirPath().toStdString());
-}
-
-std::u32string to_u32(const QString& s) {
-  const QVector<uint> aUcs4 = s.toUcs4();
-  std::u32string aOutput;
-  aOutput.reserve(static_cast<std::size_t>(aUcs4.size()));
-  for (const uint aCodePoint : aUcs4) {
-    aOutput.push_back(static_cast<char32_t>(aCodePoint));
-  }
-  return aOutput;
 }
 
 fs::path resolveConfigPath() {
@@ -93,16 +84,16 @@ fs::path resolveUserPath(const QString& pText) {
 int main(int argc, char* argv[]) {
   QApplication app(argc, argv);
 
-  if (gBlockSize != kPermanentBlockSize) {
+  if (gBlockSize != BLOCK_SIZE_LAYER_3) {
     QMessageBox::critical(nullptr,
                           "snowstorm",
-                          "FATAL: block size is permanently fixed at 500,000 bytes.");
+                          "FATAL: gBlockSize must match BLOCK_SIZE_LAYER_3.");
     return 1;
   }
-  if ((gArchiveSize % kPermanentBlockSize) != 0) {
+  if ((gArchiveSize % BLOCK_SIZE_LAYER_3) != 0) {
     QMessageBox::critical(nullptr,
                           "snowstorm",
-                          QString("FATAL: gArchiveSize (%1) must be an exact multiple of 500,000 bytes.")
+                          QString("FATAL: gArchiveSize (%1) must be an exact multiple of BLOCK_SIZE_LAYER_3.")
                               .arg(QString::number(static_cast<qulonglong>(gArchiveSize))));
     return 1;
   }
@@ -114,6 +105,12 @@ int main(int argc, char* argv[]) {
   auto* layout = new QGridLayout(&window);
   layout->setContentsMargins(12, 12, 12, 12);
   layout->setSpacing(8);
+  layout->setColumnStretch(0, 0);
+  layout->setColumnStretch(1, 1);
+  layout->setColumnStretch(2, 1);
+  layout->setColumnStretch(3, 1);
+  layout->setColumnStretch(4, 1);
+  layout->setColumnStretch(5, 0);
   auto* source_edit = new QLineEdit(&window);
   auto* archive_edit = new QLineEdit(&window);
   auto* unarchive_edit = new QLineEdit(&window);
@@ -131,15 +128,13 @@ int main(int argc, char* argv[]) {
   auto* divider_inputs = new QFrame(&window);
   auto* divider_passwords = new QFrame(&window);
   auto* divider2 = new QFrame(&window);
-  auto* divider_to_buttons_spacer = new QSpacerItem(0, 8, QSizePolicy::Minimum, QSizePolicy::Fixed);
-  auto* spacer_before_inputs_divider = new QSpacerItem(0, 8, QSizePolicy::Minimum, QSizePolicy::Fixed);
-  auto* spacer_after_inputs_divider = new QSpacerItem(0, 8, QSizePolicy::Minimum, QSizePolicy::Fixed);
-  auto* spacer_before_password_divider = new QSpacerItem(0, 8, QSizePolicy::Minimum, QSizePolicy::Fixed);
-  auto* spacer_after_password_divider = new QSpacerItem(0, 8, QSizePolicy::Minimum, QSizePolicy::Fixed);
-  auto* pack_button = new QPushButton("Pack", &window);
-  auto* unpack_button = new QPushButton("Unpack", &window);
+  auto* spacer_before_actions = new QSpacerItem(0, 8, QSizePolicy::Minimum, QSizePolicy::Fixed);
+  auto* pack_button = new QPushButton("Bundle", &window);
+  auto* unpack_button = new QPushButton("Unbundle", &window);
+  auto* sanity_button = new QPushButton("Sanity", &window);
   auto* pack_spinner = new QProgressBar(&window);
   auto* unpack_spinner = new QProgressBar(&window);
+  auto* sanity_spinner = new QProgressBar(&window);
   auto* debug_console = new QPlainTextEdit(&window);
 
   source_edit->setPlaceholderText("pack source folder -> archive folder");
@@ -200,6 +195,7 @@ int main(int argc, char* argv[]) {
 
   pack_button->setObjectName("packButton");
   unpack_button->setObjectName("unpackButton");
+  sanity_button->setObjectName("sanityButton");
   clear_logs_button->setObjectName("clearLogsButton");
   window.setStyleSheet(
       "QLineEdit { border-radius: 8px; font-size: 15px; font-weight: 700; padding: 8px 10px; background-color: #0f0f0f; color: #e8e8e8; }"
@@ -212,31 +208,42 @@ int main(int argc, char* argv[]) {
       "QPlainTextEdit { border-radius: 8px; }"
       "QPushButton#packButton { background-color: #660000; color: #ffffff; }"
       "QPushButton#unpackButton { background-color: #00008b; color: #ffffff; }"
+      "QPushButton#sanityButton { background-color: #ff8c00; color: #000000; }"
       "QPushButton#clearLogsButton { background-color: #000000; color: #ffffff; border-radius: 10px; }");
 
   constexpr int kActionHeight = 54;
   pack_button->setFixedHeight(kActionHeight);
   unpack_button->setFixedHeight(kActionHeight);
+  sanity_button->setFixedHeight(kActionHeight);
   pack_button->setMinimumHeight(kActionHeight);
   pack_button->setMaximumHeight(kActionHeight);
   unpack_button->setMinimumHeight(kActionHeight);
   unpack_button->setMaximumHeight(kActionHeight);
+  sanity_button->setMinimumHeight(kActionHeight);
+  sanity_button->setMaximumHeight(kActionHeight);
   pack_button->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
   unpack_button->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+  sanity_button->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
   pack_spinner->setRange(0, 0);
   unpack_spinner->setRange(0, 0);
+  sanity_spinner->setRange(0, 0);
   pack_spinner->setTextVisible(false);
   unpack_spinner->setTextVisible(false);
+  sanity_spinner->setTextVisible(false);
   pack_spinner->setFixedHeight(kActionHeight);
   unpack_spinner->setFixedHeight(kActionHeight);
   pack_spinner->setMinimumHeight(kActionHeight);
   pack_spinner->setMaximumHeight(kActionHeight);
   unpack_spinner->setMinimumHeight(kActionHeight);
   unpack_spinner->setMaximumHeight(kActionHeight);
+  sanity_spinner->setMinimumHeight(kActionHeight);
+  sanity_spinner->setMaximumHeight(kActionHeight);
   pack_spinner->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
   unpack_spinner->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+  sanity_spinner->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
   pack_spinner->setVisible(false);
   unpack_spinner->setVisible(false);
+  sanity_spinner->setVisible(false);
 
   debug_console->setReadOnly(true);
   debug_console->setPlaceholderText("Debug console");
@@ -252,6 +259,7 @@ int main(int argc, char* argv[]) {
   };
 
   QJsonObject config_defaults;
+  std::uint64_t configured_archive_size = 1000000ULL;
   try {
     const AppConfig aConfig = loadConfig(resolveConfigPath());
     config_defaults.insert("default_source_path", QString::fromStdString(aConfig.mDefaultSourcePath));
@@ -259,12 +267,17 @@ int main(int argc, char* argv[]) {
     config_defaults.insert("default_unarchive_path", QString::fromStdString(aConfig.mDefaultUnarchivePath));
     config_defaults.insert("default_password_1", QString::fromStdString(aConfig.mDefaultPassword1));
     config_defaults.insert("default_password_2", QString::fromStdString(aConfig.mDefaultPassword2));
+    configured_archive_size = aConfig.mDefaultArchiveSize;
   } catch (...) {
     QFile config_file("config.json");
     if (config_file.open(QIODevice::ReadOnly)) {
       const QJsonDocument config_doc = QJsonDocument::fromJson(config_file.readAll());
       if (config_doc.isObject()) {
         config_defaults = config_doc.object();
+        const QJsonValue aArchiveSizeValue = config_defaults.value("default_archive_size");
+        if (aArchiveSizeValue.isDouble()) {
+          configured_archive_size = static_cast<std::uint64_t>(aArchiveSizeValue.toDouble());
+        }
       }
     }
   }
@@ -279,29 +292,30 @@ int main(int argc, char* argv[]) {
   password1_edit->setText(config_value("default_password_1", "banana"));
   password2_edit->setText(config_value("default_password_2", "apple"));
 
-  struct ArchiveSizeOption {
-    const char* mLabel = "";
-    std::uint64_t mBytes = 0;
-  };
-  const std::vector<ArchiveSizeOption> archive_size_options = {
-      {"1 MB (1,000,000)", 1000000ULL},
-      {"10 MB (10,000,000)", 10000000ULL},
-      {"50 MB (50,000,000)", 50000000ULL},
-      {"100 MB (100,000,000)", 100000000ULL},
-      {"250 MB (250,000,000)", 250000000ULL},
-      {"500 MB (500,000,000)", 500000000ULL},
-      {"750 MB (750,000,000)", 750000000ULL},
-      {"1 GB (1,000,000,000)", 1000000000ULL},
-      {"2 GB (2,000,000,000)", 2000000000ULL},
-  };
   int archive_default_index = 0;
+  bool archive_size_found = false;
   for (std::size_t i = 0; i < archive_size_options.size(); ++i) {
     const ArchiveSizeOption& option = archive_size_options[i];
     archive_size_combo->addItem(QString::fromUtf8(option.mLabel),
                                 QVariant::fromValue(static_cast<qulonglong>(option.mBytes)));
-    if (option.mBytes == gArchiveSize) {
+    if (option.mBytes == configured_archive_size) {
       archive_default_index = static_cast<int>(i);
+      archive_size_found = true;
     }
+  }
+  if (!archive_size_found) {
+    append_log(QString("Config event: default_archive_size=%1 is not in available sizes. Falling back to 200000000.")
+                   .arg(QString::number(static_cast<qulonglong>(configured_archive_size))));
+    for (std::size_t i = 0; i < archive_size_options.size(); ++i) {
+      if (archive_size_options[i].mBytes == 200000000ULL) {
+        archive_default_index = static_cast<int>(i);
+        archive_size_found = true;
+        break;
+      }
+    }
+  }
+  if (!archive_size_found) {
+    append_log("Config event: 200000000 is missing from available sizes. Falling back to first option.");
   }
   archive_size_combo->setCurrentIndex(archive_default_index);
 
@@ -443,39 +457,37 @@ int main(int argc, char* argv[]) {
   };
 
   layout->addWidget(source_clear_button, 0, 0);
-  layout->addWidget(source_edit, 0, 1, 1, 2);
-  layout->addWidget(source_pick_button, 0, 3);
+  layout->addWidget(source_edit, 0, 1, 1, 4);
+  layout->addWidget(source_pick_button, 0, 5);
 
   layout->addWidget(archive_clear_button, 1, 0);
-  layout->addWidget(archive_edit, 1, 1, 1, 2);
-  layout->addWidget(archive_pick_button, 1, 3);
+  layout->addWidget(archive_edit, 1, 1, 1, 4);
+  layout->addWidget(archive_pick_button, 1, 5);
 
   layout->addWidget(unarchive_clear_button, 2, 0);
-  layout->addWidget(unarchive_edit, 2, 1, 1, 2);
-  layout->addWidget(unarchive_pick_button, 2, 3);
+  layout->addWidget(unarchive_edit, 2, 1, 1, 4);
+  layout->addWidget(unarchive_pick_button, 2, 5);
 
-  layout->addItem(spacer_before_inputs_divider, 3, 0, 1, 4);
-  layout->addWidget(divider_inputs, 4, 0, 1, 4);
-  layout->addItem(spacer_after_inputs_divider, 5, 0, 1, 4);
+  layout->addWidget(divider_inputs, 3, 0, 1, 6);
 
-  layout->addWidget(password1_edit, 6, 0, 1, 2);
-  layout->addWidget(password2_edit, 6, 2, 1, 2);
+  layout->addWidget(password1_edit, 4, 0, 1, 3);
+  layout->addWidget(password2_edit, 4, 3, 1, 3);
 
-  layout->addItem(spacer_before_password_divider, 7, 0, 1, 4);
-  layout->addWidget(divider_passwords, 8, 0, 1, 4);
-  layout->addItem(spacer_after_password_divider, 9, 0, 1, 4);
+  layout->addWidget(divider_passwords, 5, 0, 1, 6);
 
-  layout->addWidget(archive_size_combo, 10, 0, 1, 2);
-  layout->addWidget(clear_logs_button, 10, 2, 1, 2);
-  layout->addWidget(divider1, 11, 0, 1, 4);
-  layout->addItem(divider_to_buttons_spacer, 12, 0, 1, 4);
-  layout->addWidget(pack_button, 13, 0, 1, 2);
-  layout->addWidget(unpack_button, 13, 2, 1, 2);
-  layout->addWidget(pack_spinner, 13, 0, 1, 2);
-  layout->addWidget(unpack_spinner, 13, 2, 1, 2);
-  layout->addWidget(divider2, 14, 0, 1, 4);
-  layout->addWidget(debug_console, 15, 0, 1, 4);
-  layout->setRowStretch(15, 1);
+  layout->addWidget(archive_size_combo, 6, 0, 1, 3);
+  layout->addWidget(clear_logs_button, 6, 3, 1, 3);
+  layout->addWidget(divider1, 7, 0, 1, 6);
+  layout->addItem(spacer_before_actions, 8, 0, 1, 6);
+  layout->addWidget(pack_button, 9, 0, 1, 2);
+  layout->addWidget(unpack_button, 9, 2, 1, 2);
+  layout->addWidget(sanity_button, 9, 4, 1, 2);
+  layout->addWidget(pack_spinner, 9, 0, 1, 2);
+  layout->addWidget(unpack_spinner, 9, 2, 1, 2);
+  layout->addWidget(sanity_spinner, 9, 4, 1, 2);
+  layout->addWidget(divider2, 10, 0, 1, 6);
+  layout->addWidget(debug_console, 11, 0, 1, 6);
+  layout->setRowStretch(11, 1);
 
   QObject::connect(source_clear_button, &QToolButton::clicked, source_edit, &QLineEdit::clear);
   QObject::connect(archive_clear_button, &QToolButton::clicked, archive_edit, &QLineEdit::clear);
@@ -505,6 +517,8 @@ int main(int argc, char* argv[]) {
       fn();
     } catch (const std::exception& ex) {
       QMessageBox::critical(&window, "snowstorm", ex.what());
+    } catch (...) {
+      QMessageBox::critical(&window, "snowstorm", "Unhandled non-standard exception.");
     }
   };
 
@@ -512,7 +526,7 @@ int main(int argc, char* argv[]) {
       source_edit,            archive_edit,            unarchive_edit,        password1_edit,
       password2_edit,         archive_size_combo,      source_clear_button,   source_pick_button,
       archive_clear_button,   archive_pick_button,     unarchive_clear_button, unarchive_pick_button, clear_logs_button, pack_button,
-      unpack_button,          debug_console};
+      unpack_button,          sanity_button,            debug_console};
   bool is_busy = false;
   auto set_busy = [&](bool busy) {
     is_busy = busy;
@@ -521,8 +535,10 @@ int main(int argc, char* argv[]) {
     }
     pack_button->setVisible(!busy);
     unpack_button->setVisible(!busy);
+    sanity_button->setVisible(!busy);
     pack_spinner->setVisible(busy);
     unpack_spinner->setVisible(busy);
+    sanity_spinner->setVisible(busy);
     if (busy) {
       QApplication::setOverrideCursor(Qt::WaitCursor);
     } else {
@@ -530,6 +546,29 @@ int main(int argc, char* argv[]) {
     }
   };
   std::thread worker_thread;
+  auto reset_worker_thread_handle = [&]() {
+    if (worker_thread.joinable()) {
+      worker_thread.detach();
+    }
+  };
+  auto canonical_contains = [](const fs::path& parent, const fs::path& child) {
+    std::error_code parent_ec;
+    std::error_code child_ec;
+    const fs::path canonical_parent = fs::weakly_canonical(parent, parent_ec);
+    const fs::path canonical_child = fs::weakly_canonical(child, child_ec);
+    if (parent_ec || child_ec) {
+      return false;
+    }
+
+    auto parent_it = canonical_parent.begin();
+    auto child_it = canonical_child.begin();
+    for (; parent_it != canonical_parent.end() && child_it != canonical_child.end(); ++parent_it, ++child_it) {
+      if (*parent_it != *child_it) {
+        return false;
+      }
+    }
+    return parent_it == canonical_parent.end();
+  };
   QObject::connect(&app, &QCoreApplication::aboutToQuit, [&]() {
     if (worker_thread.joinable()) {
       worker_thread.join();
@@ -552,18 +591,15 @@ int main(int argc, char* argv[]) {
                                   .arg(QString::fromStdString(input.string())));
         return;
       }
-      if ((archive_size % kPermanentBlockSize) != 0) {
+      if ((archive_size % BLOCK_SIZE_LAYER_3) != 0) {
         QMessageBox::critical(&window,
                               "snowstorm",
                               QString("Archive size must be an exact multiple of %1 bytes.")
-                                  .arg(QString::number(static_cast<qulonglong>(kPermanentBlockSize))));
+                                  .arg(QString::number(static_cast<qulonglong>(BLOCK_SIZE_LAYER_3))));
         return;
       }
 
-      const std::u32string password_1 = to_u32(password1_edit->text());
-      const std::u32string password_2 = to_u32(password2_edit->text());
-      SandStorm preflight_crypt(gBlockSize, password_1, password_2);
-      SnowStorm preflight_snowstorm(gBlockSize, archive_size, &preflight_crypt);
+      SnowStormEngine preflight_snowstorm(archive_size);
       const ShouldBundleResult should = preflight_snowstorm.shouldBundle(input, output);
       if (should.mDecision == ShouldBundleDecision::No) {
         QMessageBox::critical(&window, "snowstorm", QString::fromStdString(should.mMessage));
@@ -584,14 +620,22 @@ int main(int argc, char* argv[]) {
       }
       set_busy(true);
       append_log("Pack started.");
-      append_log("BLOCK SIZE ALERT: 500,000 bytes is permanently fixed and must never be changed.");
+      append_log(QString("BLOCK SIZE: using BLOCK_SIZE_LAYER_3 = %1 bytes.")
+                     .arg(QString::number(static_cast<qulonglong>(BLOCK_SIZE_LAYER_3))));
       const bool clear_destination = (should.mDecision == ShouldBundleDecision::Prompt);
       const fs::path clear_destination_path = should.mResolvedDestination;
-      if (worker_thread.joinable()) {
-        worker_thread.join();
+      if (clear_destination && canonical_contains(clear_destination_path, input)) {
+        QMessageBox::critical(
+            &window,
+            "snowstorm",
+            QString("Refusing to clear destination because it contains the source path:\nDestination: %1\nSource: %2")
+                .arg(QString::fromStdString(clear_destination_path.string()))
+                .arg(QString::fromStdString(input.string())));
+        return;
       }
+      reset_worker_thread_handle();
 
-      worker_thread = std::thread([&, input, output, password_1, password_2, clear_destination, clear_destination_path, archive_size]() {
+      worker_thread = std::thread([&, input, output, clear_destination, clear_destination_path, archive_size]() {
         try {
           if (!has_meaningful_entries(input)) {
             throw std::runtime_error("Pack source directory is missing or empty: " + input.string());
@@ -621,9 +665,8 @@ int main(int argc, char* argv[]) {
                 Qt::QueuedConnection);
           }
 
-          SandStorm worker_crypt(gBlockSize, password_1, password_2);
-          SnowStorm worker_snowstorm(gBlockSize, archive_size, &worker_crypt);
-          const BundleStats stats = worker_snowstorm.bundle(
+          SnowStormEngine worker_snowstorm(archive_size);
+          const SnowStormBundleStats stats = worker_snowstorm.bundle(
               input,
               output,
               [&](std::uint64_t archive_idx, std::uint64_t archive_total, std::uint64_t files_done, std::uint64_t files_total) {
@@ -658,6 +701,15 @@ int main(int argc, char* argv[]) {
                 QMessageBox::critical(&window, "snowstorm", message);
               },
               Qt::QueuedConnection);
+        } catch (...) {
+          QMetaObject::invokeMethod(
+              &window,
+              [&]() {
+                append_log("Pack failed: unhandled non-standard exception.");
+                set_busy(false);
+                QMessageBox::critical(&window, "snowstorm", "Pack failed: unhandled non-standard exception.");
+              },
+              Qt::QueuedConnection);
         }
       });
     });
@@ -679,18 +731,15 @@ int main(int argc, char* argv[]) {
                                   .arg(QString::fromStdString(input.string())));
         return;
       }
-      if ((archive_size % kPermanentBlockSize) != 0) {
+      if ((archive_size % BLOCK_SIZE_LAYER_3) != 0) {
         QMessageBox::critical(&window,
                               "snowstorm",
                               QString("Archive size must be an exact multiple of %1 bytes.")
-                                  .arg(QString::number(static_cast<qulonglong>(kPermanentBlockSize))));
+                                  .arg(QString::number(static_cast<qulonglong>(BLOCK_SIZE_LAYER_3))));
         return;
       }
 
-      const std::u32string password_1 = to_u32(password1_edit->text());
-      const std::u32string password_2 = to_u32(password2_edit->text());
-      SandStorm preflight_crypt(gBlockSize, password_1, password_2);
-      SnowStorm preflight_snowstorm(gBlockSize, archive_size, &preflight_crypt);
+      SnowStormEngine preflight_snowstorm(archive_size);
       const ShouldBundleResult should = preflight_snowstorm.shouldUnbundle(input, output);
       if (should.mDecision == ShouldBundleDecision::No) {
         QMessageBox::critical(&window, "snowstorm", QString::fromStdString(should.mMessage));
@@ -711,14 +760,22 @@ int main(int argc, char* argv[]) {
       }
       set_busy(true);
       append_log("Unpack started.");
-      append_log("BLOCK SIZE ALERT: 500,000 bytes is permanently fixed and must never be changed.");
+      append_log(QString("BLOCK SIZE: using BLOCK_SIZE_LAYER_3 = %1 bytes.")
+                     .arg(QString::number(static_cast<qulonglong>(BLOCK_SIZE_LAYER_3))));
       const bool clear_destination = (should.mDecision == ShouldBundleDecision::Prompt);
       const fs::path clear_destination_path = should.mResolvedDestination;
-      if (worker_thread.joinable()) {
-        worker_thread.join();
+      if (clear_destination && canonical_contains(clear_destination_path, input)) {
+        QMessageBox::critical(
+            &window,
+            "snowstorm",
+            QString("Refusing to clear destination because it contains the source path:\nDestination: %1\nSource: %2")
+                .arg(QString::fromStdString(clear_destination_path.string()))
+                .arg(QString::fromStdString(input.string())));
+        return;
       }
+      reset_worker_thread_handle();
 
-      worker_thread = std::thread([&, input, output, password_1, password_2, clear_destination, clear_destination_path, archive_size]() {
+      worker_thread = std::thread([&, input, output, clear_destination, clear_destination_path, archive_size]() {
         try {
           if (!has_meaningful_entries(input)) {
             throw std::runtime_error("Unpack source directory is missing or empty: " + input.string());
@@ -732,9 +789,8 @@ int main(int argc, char* argv[]) {
                 Qt::QueuedConnection);
           }
 
-          SandStorm worker_crypt(gBlockSize, password_1, password_2);
-          SnowStorm worker_snowstorm(gBlockSize, archive_size, &worker_crypt);
-          const UnbundleStats stats = worker_snowstorm.unbundle(
+          SnowStormEngine worker_snowstorm(archive_size);
+          const SnowStormUnbundleStats stats = worker_snowstorm.unbundle(
               input,
               output,
               [&](std::uint64_t archive_idx, std::uint64_t archive_total, std::uint64_t files_done, std::uint64_t /*files_total*/) {
@@ -750,7 +806,7 @@ int main(int argc, char* argv[]) {
 
           QMetaObject::invokeMethod(
               &window,
-              [&, files_unpacked = static_cast<qulonglong>(stats.mFilesUnbundled), archives_total = static_cast<qulonglong>(stats.mArchivesTotal)]() {
+              [&, files_unpacked = static_cast<qulonglong>(stats.mFilesUnbundled), archives_total = static_cast<qulonglong>(stats.mArchivesTouched)]() {
                 const QString summary = QString("Unpacked %1 files from %2 archives.")
                                             .arg(QString::number(files_unpacked))
                                             .arg(QString::number(archives_total));
@@ -766,6 +822,91 @@ int main(int argc, char* argv[]) {
                 append_log(QString("Unpack failed: %1").arg(message));
                 set_busy(false);
                 QMessageBox::critical(&window, "snowstorm", message);
+              },
+              Qt::QueuedConnection);
+        } catch (...) {
+          QMetaObject::invokeMethod(
+              &window,
+              [&]() {
+                append_log("Unpack failed: unhandled non-standard exception.");
+                set_busy(false);
+                QMessageBox::critical(&window, "snowstorm", "Unpack failed: unhandled non-standard exception.");
+              },
+              Qt::QueuedConnection);
+        }
+      });
+    });
+  });
+
+  QObject::connect(sanity_button, &QPushButton::clicked, [&]() {
+    run_with_guard([&]() {
+      if (is_busy) {
+        return;
+      }
+      const fs::path source = resolveUserPath(source_edit->text());
+      const fs::path destination = resolveUserPath(unarchive_edit->text());
+      if (!fs::exists(source) || !fs::is_directory(source)) {
+        QMessageBox::critical(&window,
+                              "snowstorm",
+                              QString("Sanity source directory is missing:\n%1")
+                                  .arg(QString::fromStdString(source.string())));
+        return;
+      }
+      if (!fs::exists(destination) || !fs::is_directory(destination)) {
+        QMessageBox::critical(&window,
+                              "snowstorm",
+                              QString("Sanity destination directory is missing:\n%1")
+                                  .arg(QString::fromStdString(destination.string())));
+        return;
+      }
+
+      set_busy(true);
+      append_log("Sanity started.");
+      reset_worker_thread_handle();
+      worker_thread = std::thread([&, source, destination]() {
+        try {
+          std::string compare_error;
+          const bool success = FileCompare::Test(
+              [&](const std::string& line) {
+                const QString qline = QString::fromStdString(line);
+                QMetaObject::invokeMethod(
+                    &window,
+                    [&, qline]() { append_log(qline); },
+                    Qt::QueuedConnection);
+              },
+              source,
+              destination,
+              &compare_error);
+
+          QMetaObject::invokeMethod(
+              &window,
+              [&, success, compare_error]() {
+                if (success) {
+                  append_log("Sanity passed.");
+                } else {
+                  append_log("Sanity failed.");
+                  if (!compare_error.empty()) {
+                    append_log(QString::fromStdString(compare_error));
+                  }
+                }
+                set_busy(false);
+              },
+              Qt::QueuedConnection);
+        } catch (const std::exception& ex) {
+          const QString message = compact_error(QString::fromUtf8(ex.what()));
+          QMetaObject::invokeMethod(
+              &window,
+              [&, message]() {
+                append_log(QString("Sanity failed: %1").arg(message));
+                set_busy(false);
+              },
+              Qt::QueuedConnection);
+        } catch (...) {
+          QMetaObject::invokeMethod(
+              &window,
+              [&]() {
+                append_log("Sanity failed: unhandled non-standard exception.");
+                set_busy(false);
               },
               Qt::QueuedConnection);
         }

@@ -4,9 +4,9 @@
 #include <string>
 
 #include "ConfigLoader.hpp"
+#include "Crypt.hpp"
 #include "Globals.hpp"
-#include "SandStorm/SandStorm.hpp"
-#include "SnowStorm/SnowStorm.hpp"
+#include "SnowStorm/SnowStormEngine.hpp"
 
 namespace fs = std::filesystem;
 
@@ -17,15 +17,6 @@ inline constexpr bool kInferRelativePathsFromCwd = true;
 #else
 inline constexpr bool kInferRelativePathsFromCwd = false;
 #endif
-
-std::u32string toU32(const std::string& pText) {
-  std::u32string aOutput;
-  aOutput.reserve(pText.size());
-  for (const unsigned char aChar : pText) {
-    aOutput.push_back(static_cast<char32_t>(aChar));
-  }
-  return aOutput;
-}
 
 fs::path inferredBaseDirectory(const char* pArgv0) {
   if (kInferRelativePathsFromCwd) {
@@ -66,23 +57,38 @@ void printUsage() {
   std::cout << "  peanutbutter_runner unpack <archive> <unzipped>\n";
 }
 
+bool isAvailableArchiveSize(std::uint64_t pBytes) {
+  for (const ArchiveSizeOption& aOption : archive_size_options) {
+    if (aOption.mBytes == pBytes) {
+      return true;
+    }
+  }
+  return false;
+}
+
 }  // namespace
 
 int main(int argc, char** argv) {
   try {
-    if (gBlockSize != kPermanentBlockSize) {
-      throw std::runtime_error("FATAL: block size is permanently fixed at 500,000 bytes.");
+    if (gBlockSize != BLOCK_SIZE_LAYER_3) {
+      throw std::runtime_error("FATAL: gBlockSize must match BLOCK_SIZE_LAYER_3.");
     }
-    if ((gArchiveSize % kPermanentBlockSize) != 0) {
-      throw std::runtime_error("FATAL: gArchiveSize must be an exact multiple of 500,000 bytes.");
+    if ((gArchiveSize % BLOCK_SIZE_LAYER_3) != 0) {
+      throw std::runtime_error("FATAL: gArchiveSize must be an exact multiple of BLOCK_SIZE_LAYER_3.");
     }
 
     const AppConfig aConfig = loadConfig(resolveConfigPath((argc > 0) ? argv[0] : nullptr));
+    std::uint64_t aArchiveSize = aConfig.mDefaultArchiveSize;
+    if (!isAvailableArchiveSize(aArchiveSize)) {
+      std::cout << "Config event: default_archive_size=" << aArchiveSize
+                << " is not in available sizes. Falling back to 200000000.\n";
+      aArchiveSize = 200000000ULL;
+    }
+    if ((aArchiveSize % BLOCK_SIZE_LAYER_3) != 0) {
+      throw std::runtime_error("FATAL: configured archive size must be an exact multiple of BLOCK_SIZE_LAYER_3.");
+    }
 
-    SandStorm aCrypt(gBlockSize,
-                     toU32(aConfig.mDefaultPassword1),
-                     toU32(aConfig.mDefaultPassword2));
-    SnowStorm aSnowStorm(gBlockSize, gArchiveSize, &aCrypt);
+    SnowStormEngine aSnowStorm(aArchiveSize);
 
     if (argc < 2) {
       printUsage();
@@ -107,7 +113,7 @@ int main(int argc, char** argv) {
       if (aGate.mDecision != ShouldBundleDecision::Yes) {
         throw std::runtime_error("Cannot pack: " + aGate.mMessage);
       }
-      const BundleStats aStats = aSnowStorm.bundle(aSource, aArchive, aProgress);
+      const SnowStormBundleStats aStats = aSnowStorm.bundle(aSource, aArchive, aProgress);
       std::cout << "Packed " << aStats.mFileCount << " files into " << aStats.mArchiveCount << " archives.\n";
       return 0;
     }
@@ -121,7 +127,7 @@ int main(int argc, char** argv) {
       if (aGate.mDecision != ShouldBundleDecision::Yes) {
         throw std::runtime_error("Cannot unpack: " + aGate.mMessage);
       }
-      const UnbundleStats aStats = aSnowStorm.unbundle(aArchive, aUnzipped, aProgress);
+      const SnowStormUnbundleStats aStats = aSnowStorm.unbundle(aArchive, aUnzipped, aProgress);
       std::cout << "Unpacked " << aStats.mFilesUnbundled << " files from " << aStats.mArchivesTouched << " archives.\n";
       return 0;
     }

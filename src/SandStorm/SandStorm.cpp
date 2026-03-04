@@ -31,8 +31,7 @@ bool SandStorm::encrypt(const unsigned char* pSource,
   (void)mPassword1;
   (void)mPassword2;
 
-  mCipher.transformWindow(pSource, pDestination, static_cast<std::size_t>(pSize));
-  return true;
+  return mCipher.encrypt(pSource, pDestination, pSize, pError);
 }
 
 bool SandStorm::decrypt(const unsigned char* pSource,

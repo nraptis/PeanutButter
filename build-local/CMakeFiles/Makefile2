@@ -64,13 +64,17 @@ CMAKE_BINARY_DIR = /Users/naraptis/Desktop/PeanutButter/build-local
 
 # The main recursive "all" target.
 all: CMakeFiles/peanutbutter_core.dir/all
+all: CMakeFiles/peanutbutter_core_tests.dir/all
 all: CMakeFiles/peanutbutter_runner.dir/all
+all: CMakeFiles/peanutbutter_tests.dir/all
 all: CMakeFiles/peanutbutter.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/peanutbutter_core.dir/codegen
+codegen: CMakeFiles/peanutbutter_core_tests.dir/codegen
 codegen: CMakeFiles/peanutbutter_runner.dir/codegen
+codegen: CMakeFiles/peanutbutter_tests.dir/codegen
 codegen: CMakeFiles/peanutbutter.dir/codegen
 .PHONY : codegen
 
@@ -80,7 +84,9 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/peanutbutter_core.dir/clean
+clean: CMakeFiles/peanutbutter_core_tests.dir/clean
 clean: CMakeFiles/peanutbutter_runner.dir/clean
+clean: CMakeFiles/peanutbutter_tests.dir/clean
 clean: CMakeFiles/peanutbutter.dir/clean
 .PHONY : clean
 
@@ -91,12 +97,12 @@ clean: CMakeFiles/peanutbutter.dir/clean
 CMakeFiles/peanutbutter_core.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12 "Built target peanutbutter_core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target peanutbutter_core"
 .PHONY : CMakeFiles/peanutbutter_core.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/peanutbutter_core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/peanutbutter_core.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles 0
 .PHONY : CMakeFiles/peanutbutter_core.dir/rule
@@ -108,7 +114,7 @@ peanutbutter_core: CMakeFiles/peanutbutter_core.dir/rule
 # codegen rule for target.
 CMakeFiles/peanutbutter_core.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12 "Finished codegen for target peanutbutter_core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Finished codegen for target peanutbutter_core"
 .PHONY : CMakeFiles/peanutbutter_core.dir/codegen
 
 # clean rule for target.
@@ -117,18 +123,50 @@ CMakeFiles/peanutbutter_core.dir/clean:
 .PHONY : CMakeFiles/peanutbutter_core.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/peanutbutter_core_tests.dir
+
+# All Build rule for target.
+CMakeFiles/peanutbutter_core_tests.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38 "Built target peanutbutter_core_tests"
+.PHONY : CMakeFiles/peanutbutter_core_tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/peanutbutter_core_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles 18
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/peanutbutter_core_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles 0
+.PHONY : CMakeFiles/peanutbutter_core_tests.dir/rule
+
+# Convenience name for target.
+peanutbutter_core_tests: CMakeFiles/peanutbutter_core_tests.dir/rule
+.PHONY : peanutbutter_core_tests
+
+# codegen rule for target.
+CMakeFiles/peanutbutter_core_tests.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38 "Finished codegen for target peanutbutter_core_tests"
+.PHONY : CMakeFiles/peanutbutter_core_tests.dir/codegen
+
+# clean rule for target.
+CMakeFiles/peanutbutter_core_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/clean
+.PHONY : CMakeFiles/peanutbutter_core_tests.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/peanutbutter_runner.dir
 
 # All Build rule for target.
 CMakeFiles/peanutbutter_runner.dir/all: CMakeFiles/peanutbutter_core.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_runner.dir/build.make CMakeFiles/peanutbutter_runner.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_runner.dir/build.make CMakeFiles/peanutbutter_runner.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=13,14 "Built target peanutbutter_runner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=39,40 "Built target peanutbutter_runner"
 .PHONY : CMakeFiles/peanutbutter_runner.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/peanutbutter_runner.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/peanutbutter_runner.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles 0
 .PHONY : CMakeFiles/peanutbutter_runner.dir/rule
@@ -140,13 +178,45 @@ peanutbutter_runner: CMakeFiles/peanutbutter_runner.dir/rule
 # codegen rule for target.
 CMakeFiles/peanutbutter_runner.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_runner.dir/build.make CMakeFiles/peanutbutter_runner.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=13,14 "Finished codegen for target peanutbutter_runner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=39,40 "Finished codegen for target peanutbutter_runner"
 .PHONY : CMakeFiles/peanutbutter_runner.dir/codegen
 
 # clean rule for target.
 CMakeFiles/peanutbutter_runner.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_runner.dir/build.make CMakeFiles/peanutbutter_runner.dir/clean
 .PHONY : CMakeFiles/peanutbutter_runner.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/peanutbutter_tests.dir
+
+# All Build rule for target.
+CMakeFiles/peanutbutter_tests.dir/all: CMakeFiles/peanutbutter_core_tests.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_tests.dir/build.make CMakeFiles/peanutbutter_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_tests.dir/build.make CMakeFiles/peanutbutter_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=41,42 "Built target peanutbutter_tests"
+.PHONY : CMakeFiles/peanutbutter_tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/peanutbutter_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles 20
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/peanutbutter_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles 0
+.PHONY : CMakeFiles/peanutbutter_tests.dir/rule
+
+# Convenience name for target.
+peanutbutter_tests: CMakeFiles/peanutbutter_tests.dir/rule
+.PHONY : peanutbutter_tests
+
+# codegen rule for target.
+CMakeFiles/peanutbutter_tests.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_tests.dir/build.make CMakeFiles/peanutbutter_tests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=41,42 "Finished codegen for target peanutbutter_tests"
+.PHONY : CMakeFiles/peanutbutter_tests.dir/codegen
+
+# clean rule for target.
+CMakeFiles/peanutbutter_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_tests.dir/build.make CMakeFiles/peanutbutter_tests.dir/clean
+.PHONY : CMakeFiles/peanutbutter_tests.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/peanutbutter.dir
@@ -160,7 +230,7 @@ CMakeFiles/peanutbutter.dir/all: CMakeFiles/peanutbutter_core.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/peanutbutter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/peanutbutter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles 0
 .PHONY : CMakeFiles/peanutbutter.dir/rule

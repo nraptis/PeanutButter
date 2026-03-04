@@ -100,24 +100,52 @@ CMakeFiles/peanutbutter_core.dir/src/ConfigLoader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/ConfigLoader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/ConfigLoader.cpp -o CMakeFiles/peanutbutter_core.dir/src/ConfigLoader.cpp.s
 
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStorm.cpp
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStorm.cpp
+CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
+CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/Crypt.cpp
+CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/Crypt.cpp
 
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStorm.cpp > CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.i
+CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naraptis/Desktop/PeanutButter/src/Crypt.cpp > CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.i
 
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStorm.cpp -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.s
+CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/Crypt.cpp -o CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.s
+
+CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
+CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/FileCompare.cpp
+CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/FileCompare.cpp
+
+CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naraptis/Desktop/PeanutButter/src/FileCompare.cpp > CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.i
+
+CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/FileCompare.cpp -o CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.s
+
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormEngine.cpp
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormEngine.cpp
+
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormEngine.cpp > CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.i
+
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormEngine.cpp -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.s
 
 CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
 CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormUtils.cpp
 CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormUtils.cpp
 
 CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.i: cmake_force
@@ -131,7 +159,7 @@ CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.s: cmake_force
 CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
 CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormCountResult.cpp
 CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormCountResult.cpp
 
 CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.i: cmake_force
@@ -142,38 +170,94 @@ CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormCountResult.cpp -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.s
 
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleWriter.cpp
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleWriter.cpp
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleSealerForward.cpp
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleSealerForward.cpp
 
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleWriter.cpp > CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.i
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleSealerForward.cpp > CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.i
 
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleWriter.cpp -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.s
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleSealerForward.cpp -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.s
 
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleReader.cpp
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleReader.cpp
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleSealerBackward.cpp
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleSealerBackward.cpp
 
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleReader.cpp > CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.i
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleSealerBackward.cpp > CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.i
 
-CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleReader.cpp -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.s
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundleSealerBackward.cpp -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.s
+
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundlePackerForward.cpp
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundlePackerForward.cpp
+
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundlePackerForward.cpp > CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.i
+
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundlePackerForward.cpp -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.s
+
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundlePackerBackward.cpp
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundlePackerBackward.cpp
+
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundlePackerBackward.cpp > CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.i
+
+CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SnowStorm/SnowStormBundlePackerBackward.cpp -o CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.s
+
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SandStorm/EncryptionLayer.cpp
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SandStorm/EncryptionLayer.cpp
+
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naraptis/Desktop/PeanutButter/src/SandStorm/EncryptionLayer.cpp > CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.i
+
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SandStorm/EncryptionLayer.cpp -o CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.s
+
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SandStorm/PasswordCiper.cpp
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SandStorm/PasswordCiper.cpp
+
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naraptis/Desktop/PeanutButter/src/SandStorm/PasswordCiper.cpp > CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.i
+
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SandStorm/PasswordCiper.cpp -o CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.s
 
 CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
 CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SandStorm/SandStorm.cpp
 CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SandStorm/SandStorm.cpp
 
 CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.i: cmake_force
@@ -184,10 +268,24 @@ CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SandStorm/SandStorm.cpp -o CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.s
 
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SandStorm/SplintCipher.cpp
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SandStorm/SplintCipher.cpp
+
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naraptis/Desktop/PeanutButter/src/SandStorm/SplintCipher.cpp > CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.i
+
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SandStorm/SplintCipher.cpp -o CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.s
+
 CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
 CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SandStorm/TaylorCipher.cpp
 CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SandStorm/TaylorCipher.cpp
 
 CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.i: cmake_force
@@ -198,33 +296,63 @@ CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SandStorm/TaylorCipher.cpp -o CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.s
 
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.o: CMakeFiles/peanutbutter_core.dir/flags.make
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.o: /Users/naraptis/Desktop/PeanutButter/src/SandStorm/WeaveCipher.cpp
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.o: CMakeFiles/peanutbutter_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.o -MF CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.o.d -o CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.o -c /Users/naraptis/Desktop/PeanutButter/src/SandStorm/WeaveCipher.cpp
+
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naraptis/Desktop/PeanutButter/src/SandStorm/WeaveCipher.cpp > CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.i
+
+CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naraptis/Desktop/PeanutButter/src/SandStorm/WeaveCipher.cpp -o CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.s
+
 # Object files for target peanutbutter_core
 peanutbutter_core_OBJECTS = \
 "CMakeFiles/peanutbutter_core.dir/src/Globals.cpp.o" \
 "CMakeFiles/peanutbutter_core.dir/src/ConfigLoader.cpp.o" \
-"CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.o" \
+"CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.o" \
+"CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.o" \
+"CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.o" \
 "CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.o" \
 "CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.o" \
-"CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.o" \
-"CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.o" \
+"CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.o" \
+"CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.o" \
+"CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.o" \
+"CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.o" \
+"CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.o" \
+"CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.o" \
 "CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.o" \
-"CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.o"
+"CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.o" \
+"CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.o" \
+"CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.o"
 
 # External object files for target peanutbutter_core
 peanutbutter_core_EXTERNAL_OBJECTS =
 
 libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/Globals.cpp.o
 libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/ConfigLoader.cpp.o
-libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.o
+libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.o
+libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.o
+libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.o
 libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.o
 libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.o
-libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.o
-libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.o
+libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.o
+libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.o
+libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.o
+libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.o
+libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.o
+libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.o
 libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.o
+libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.o
 libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.o
+libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.o
 libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/build.make
 libpeanutbutter_core.a: CMakeFiles/peanutbutter_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libpeanutbutter_core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/naraptis/Desktop/PeanutButter/build-local/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX static library libpeanutbutter_core.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/peanutbutter_core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/peanutbutter_core.dir/link.txt --verbose=$(VERBOSE)
 

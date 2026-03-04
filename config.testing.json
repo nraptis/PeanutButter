@@ -1,0 +1,8 @@
+{
+  "default_source_path": "testdata/input",
+  "default_archive_path": "testdata/archive",
+  "default_unarchive_path": "testdata/unzipped",
+  "default_archive_size": 1000000,
+  "default_password_1": "banana",
+  "default_password_2": "apple"
+}

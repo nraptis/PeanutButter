@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/naraptis/Desktop/PeanutButter/build-local
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/opt/homebrew/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -130,6 +140,19 @@ peanutbutter_core/fast:
 .PHONY : peanutbutter_core/fast
 
 #=============================================================================
+# Target rules for targets named peanutbutter_core_tests
+
+# Build rule for target.
+peanutbutter_core_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 peanutbutter_core_tests
+.PHONY : peanutbutter_core_tests
+
+# fast build rule for target.
+peanutbutter_core_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/build
+.PHONY : peanutbutter_core_tests/fast
+
+#=============================================================================
 # Target rules for targets named peanutbutter_runner
 
 # Build rule for target.
@@ -141,6 +164,19 @@ peanutbutter_runner: cmake_check_build_system
 peanutbutter_runner/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_runner.dir/build.make CMakeFiles/peanutbutter_runner.dir/build
 .PHONY : peanutbutter_runner/fast
+
+#=============================================================================
+# Target rules for targets named peanutbutter_tests
+
+# Build rule for target.
+peanutbutter_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 peanutbutter_tests
+.PHONY : peanutbutter_tests
+
+# fast build rule for target.
+peanutbutter_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_tests.dir/build.make CMakeFiles/peanutbutter_tests.dir/build
+.PHONY : peanutbutter_tests/fast
 
 #=============================================================================
 # Target rules for targets named peanutbutter
@@ -161,6 +197,7 @@ src/ConfigLoader.o: src/ConfigLoader.cpp.o
 # target to build an object file
 src/ConfigLoader.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/ConfigLoader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/ConfigLoader.cpp.o
 .PHONY : src/ConfigLoader.cpp.o
 
 src/ConfigLoader.i: src/ConfigLoader.cpp.i
@@ -169,6 +206,7 @@ src/ConfigLoader.i: src/ConfigLoader.cpp.i
 # target to preprocess a source file
 src/ConfigLoader.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/ConfigLoader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/ConfigLoader.cpp.i
 .PHONY : src/ConfigLoader.cpp.i
 
 src/ConfigLoader.s: src/ConfigLoader.cpp.s
@@ -177,7 +215,62 @@ src/ConfigLoader.s: src/ConfigLoader.cpp.s
 # target to generate assembly for a file
 src/ConfigLoader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/ConfigLoader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/ConfigLoader.cpp.s
 .PHONY : src/ConfigLoader.cpp.s
+
+src/Crypt.o: src/Crypt.cpp.o
+.PHONY : src/Crypt.o
+
+# target to build an object file
+src/Crypt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/Crypt.cpp.o
+.PHONY : src/Crypt.cpp.o
+
+src/Crypt.i: src/Crypt.cpp.i
+.PHONY : src/Crypt.i
+
+# target to preprocess a source file
+src/Crypt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/Crypt.cpp.i
+.PHONY : src/Crypt.cpp.i
+
+src/Crypt.s: src/Crypt.cpp.s
+.PHONY : src/Crypt.s
+
+# target to generate assembly for a file
+src/Crypt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/Crypt.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/Crypt.cpp.s
+.PHONY : src/Crypt.cpp.s
+
+src/FileCompare.o: src/FileCompare.cpp.o
+.PHONY : src/FileCompare.o
+
+# target to build an object file
+src/FileCompare.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/FileCompare.cpp.o
+.PHONY : src/FileCompare.cpp.o
+
+src/FileCompare.i: src/FileCompare.cpp.i
+.PHONY : src/FileCompare.i
+
+# target to preprocess a source file
+src/FileCompare.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/FileCompare.cpp.i
+.PHONY : src/FileCompare.cpp.i
+
+src/FileCompare.s: src/FileCompare.cpp.s
+.PHONY : src/FileCompare.s
+
+# target to generate assembly for a file
+src/FileCompare.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/FileCompare.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/FileCompare.cpp.s
+.PHONY : src/FileCompare.cpp.s
 
 src/Globals.o: src/Globals.cpp.o
 .PHONY : src/Globals.o
@@ -185,6 +278,7 @@ src/Globals.o: src/Globals.cpp.o
 # target to build an object file
 src/Globals.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/Globals.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/Globals.cpp.o
 .PHONY : src/Globals.cpp.o
 
 src/Globals.i: src/Globals.cpp.i
@@ -193,6 +287,7 @@ src/Globals.i: src/Globals.cpp.i
 # target to preprocess a source file
 src/Globals.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/Globals.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/Globals.cpp.i
 .PHONY : src/Globals.cpp.i
 
 src/Globals.s: src/Globals.cpp.s
@@ -201,7 +296,62 @@ src/Globals.s: src/Globals.cpp.s
 # target to generate assembly for a file
 src/Globals.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/Globals.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/Globals.cpp.s
 .PHONY : src/Globals.cpp.s
+
+src/SandStorm/EncryptionLayer.o: src/SandStorm/EncryptionLayer.cpp.o
+.PHONY : src/SandStorm/EncryptionLayer.o
+
+# target to build an object file
+src/SandStorm/EncryptionLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/EncryptionLayer.cpp.o
+.PHONY : src/SandStorm/EncryptionLayer.cpp.o
+
+src/SandStorm/EncryptionLayer.i: src/SandStorm/EncryptionLayer.cpp.i
+.PHONY : src/SandStorm/EncryptionLayer.i
+
+# target to preprocess a source file
+src/SandStorm/EncryptionLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/EncryptionLayer.cpp.i
+.PHONY : src/SandStorm/EncryptionLayer.cpp.i
+
+src/SandStorm/EncryptionLayer.s: src/SandStorm/EncryptionLayer.cpp.s
+.PHONY : src/SandStorm/EncryptionLayer.s
+
+# target to generate assembly for a file
+src/SandStorm/EncryptionLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/EncryptionLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/EncryptionLayer.cpp.s
+.PHONY : src/SandStorm/EncryptionLayer.cpp.s
+
+src/SandStorm/PasswordCiper.o: src/SandStorm/PasswordCiper.cpp.o
+.PHONY : src/SandStorm/PasswordCiper.o
+
+# target to build an object file
+src/SandStorm/PasswordCiper.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/PasswordCiper.cpp.o
+.PHONY : src/SandStorm/PasswordCiper.cpp.o
+
+src/SandStorm/PasswordCiper.i: src/SandStorm/PasswordCiper.cpp.i
+.PHONY : src/SandStorm/PasswordCiper.i
+
+# target to preprocess a source file
+src/SandStorm/PasswordCiper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/PasswordCiper.cpp.i
+.PHONY : src/SandStorm/PasswordCiper.cpp.i
+
+src/SandStorm/PasswordCiper.s: src/SandStorm/PasswordCiper.cpp.s
+.PHONY : src/SandStorm/PasswordCiper.s
+
+# target to generate assembly for a file
+src/SandStorm/PasswordCiper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/PasswordCiper.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/PasswordCiper.cpp.s
+.PHONY : src/SandStorm/PasswordCiper.cpp.s
 
 src/SandStorm/SandStorm.o: src/SandStorm/SandStorm.cpp.o
 .PHONY : src/SandStorm/SandStorm.o
@@ -209,6 +359,7 @@ src/SandStorm/SandStorm.o: src/SandStorm/SandStorm.cpp.o
 # target to build an object file
 src/SandStorm/SandStorm.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/SandStorm.cpp.o
 .PHONY : src/SandStorm/SandStorm.cpp.o
 
 src/SandStorm/SandStorm.i: src/SandStorm/SandStorm.cpp.i
@@ -217,6 +368,7 @@ src/SandStorm/SandStorm.i: src/SandStorm/SandStorm.cpp.i
 # target to preprocess a source file
 src/SandStorm/SandStorm.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/SandStorm.cpp.i
 .PHONY : src/SandStorm/SandStorm.cpp.i
 
 src/SandStorm/SandStorm.s: src/SandStorm/SandStorm.cpp.s
@@ -225,7 +377,35 @@ src/SandStorm/SandStorm.s: src/SandStorm/SandStorm.cpp.s
 # target to generate assembly for a file
 src/SandStorm/SandStorm.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/SandStorm.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/SandStorm.cpp.s
 .PHONY : src/SandStorm/SandStorm.cpp.s
+
+src/SandStorm/SplintCipher.o: src/SandStorm/SplintCipher.cpp.o
+.PHONY : src/SandStorm/SplintCipher.o
+
+# target to build an object file
+src/SandStorm/SplintCipher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/SplintCipher.cpp.o
+.PHONY : src/SandStorm/SplintCipher.cpp.o
+
+src/SandStorm/SplintCipher.i: src/SandStorm/SplintCipher.cpp.i
+.PHONY : src/SandStorm/SplintCipher.i
+
+# target to preprocess a source file
+src/SandStorm/SplintCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/SplintCipher.cpp.i
+.PHONY : src/SandStorm/SplintCipher.cpp.i
+
+src/SandStorm/SplintCipher.s: src/SandStorm/SplintCipher.cpp.s
+.PHONY : src/SandStorm/SplintCipher.s
+
+# target to generate assembly for a file
+src/SandStorm/SplintCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/SplintCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/SplintCipher.cpp.s
+.PHONY : src/SandStorm/SplintCipher.cpp.s
 
 src/SandStorm/TaylorCipher.o: src/SandStorm/TaylorCipher.cpp.o
 .PHONY : src/SandStorm/TaylorCipher.o
@@ -233,6 +413,7 @@ src/SandStorm/TaylorCipher.o: src/SandStorm/TaylorCipher.cpp.o
 # target to build an object file
 src/SandStorm/TaylorCipher.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/TaylorCipher.cpp.o
 .PHONY : src/SandStorm/TaylorCipher.cpp.o
 
 src/SandStorm/TaylorCipher.i: src/SandStorm/TaylorCipher.cpp.i
@@ -241,6 +422,7 @@ src/SandStorm/TaylorCipher.i: src/SandStorm/TaylorCipher.cpp.i
 # target to preprocess a source file
 src/SandStorm/TaylorCipher.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/TaylorCipher.cpp.i
 .PHONY : src/SandStorm/TaylorCipher.cpp.i
 
 src/SandStorm/TaylorCipher.s: src/SandStorm/TaylorCipher.cpp.s
@@ -249,79 +431,143 @@ src/SandStorm/TaylorCipher.s: src/SandStorm/TaylorCipher.cpp.s
 # target to generate assembly for a file
 src/SandStorm/TaylorCipher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/TaylorCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/TaylorCipher.cpp.s
 .PHONY : src/SandStorm/TaylorCipher.cpp.s
 
-src/SnowStorm/SnowStorm.o: src/SnowStorm/SnowStorm.cpp.o
-.PHONY : src/SnowStorm/SnowStorm.o
+src/SandStorm/WeaveCipher.o: src/SandStorm/WeaveCipher.cpp.o
+.PHONY : src/SandStorm/WeaveCipher.o
 
 # target to build an object file
-src/SnowStorm/SnowStorm.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.o
-.PHONY : src/SnowStorm/SnowStorm.cpp.o
+src/SandStorm/WeaveCipher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/WeaveCipher.cpp.o
+.PHONY : src/SandStorm/WeaveCipher.cpp.o
 
-src/SnowStorm/SnowStorm.i: src/SnowStorm/SnowStorm.cpp.i
-.PHONY : src/SnowStorm/SnowStorm.i
+src/SandStorm/WeaveCipher.i: src/SandStorm/WeaveCipher.cpp.i
+.PHONY : src/SandStorm/WeaveCipher.i
 
 # target to preprocess a source file
-src/SnowStorm/SnowStorm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.i
-.PHONY : src/SnowStorm/SnowStorm.cpp.i
+src/SandStorm/WeaveCipher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/WeaveCipher.cpp.i
+.PHONY : src/SandStorm/WeaveCipher.cpp.i
 
-src/SnowStorm/SnowStorm.s: src/SnowStorm/SnowStorm.cpp.s
-.PHONY : src/SnowStorm/SnowStorm.s
+src/SandStorm/WeaveCipher.s: src/SandStorm/WeaveCipher.cpp.s
+.PHONY : src/SandStorm/WeaveCipher.s
 
 # target to generate assembly for a file
-src/SnowStorm/SnowStorm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStorm.cpp.s
-.PHONY : src/SnowStorm/SnowStorm.cpp.s
+src/SandStorm/WeaveCipher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SandStorm/WeaveCipher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SandStorm/WeaveCipher.cpp.s
+.PHONY : src/SandStorm/WeaveCipher.cpp.s
 
-src/SnowStorm/SnowStormBundleReader.o: src/SnowStorm/SnowStormBundleReader.cpp.o
-.PHONY : src/SnowStorm/SnowStormBundleReader.o
+src/SnowStorm/SnowStormBundlePackerBackward.o: src/SnowStorm/SnowStormBundlePackerBackward.cpp.o
+.PHONY : src/SnowStorm/SnowStormBundlePackerBackward.o
 
 # target to build an object file
-src/SnowStorm/SnowStormBundleReader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.o
-.PHONY : src/SnowStorm/SnowStormBundleReader.cpp.o
+src/SnowStorm/SnowStormBundlePackerBackward.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.o
+.PHONY : src/SnowStorm/SnowStormBundlePackerBackward.cpp.o
 
-src/SnowStorm/SnowStormBundleReader.i: src/SnowStorm/SnowStormBundleReader.cpp.i
-.PHONY : src/SnowStorm/SnowStormBundleReader.i
+src/SnowStorm/SnowStormBundlePackerBackward.i: src/SnowStorm/SnowStormBundlePackerBackward.cpp.i
+.PHONY : src/SnowStorm/SnowStormBundlePackerBackward.i
 
 # target to preprocess a source file
-src/SnowStorm/SnowStormBundleReader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.i
-.PHONY : src/SnowStorm/SnowStormBundleReader.cpp.i
+src/SnowStorm/SnowStormBundlePackerBackward.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.i
+.PHONY : src/SnowStorm/SnowStormBundlePackerBackward.cpp.i
 
-src/SnowStorm/SnowStormBundleReader.s: src/SnowStorm/SnowStormBundleReader.cpp.s
-.PHONY : src/SnowStorm/SnowStormBundleReader.s
+src/SnowStorm/SnowStormBundlePackerBackward.s: src/SnowStorm/SnowStormBundlePackerBackward.cpp.s
+.PHONY : src/SnowStorm/SnowStormBundlePackerBackward.s
 
 # target to generate assembly for a file
-src/SnowStorm/SnowStormBundleReader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleReader.cpp.s
-.PHONY : src/SnowStorm/SnowStormBundleReader.cpp.s
+src/SnowStorm/SnowStormBundlePackerBackward.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormBundlePackerBackward.cpp.s
+.PHONY : src/SnowStorm/SnowStormBundlePackerBackward.cpp.s
 
-src/SnowStorm/SnowStormBundleWriter.o: src/SnowStorm/SnowStormBundleWriter.cpp.o
-.PHONY : src/SnowStorm/SnowStormBundleWriter.o
+src/SnowStorm/SnowStormBundlePackerForward.o: src/SnowStorm/SnowStormBundlePackerForward.cpp.o
+.PHONY : src/SnowStorm/SnowStormBundlePackerForward.o
 
 # target to build an object file
-src/SnowStorm/SnowStormBundleWriter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.o
-.PHONY : src/SnowStorm/SnowStormBundleWriter.cpp.o
+src/SnowStorm/SnowStormBundlePackerForward.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.o
+.PHONY : src/SnowStorm/SnowStormBundlePackerForward.cpp.o
 
-src/SnowStorm/SnowStormBundleWriter.i: src/SnowStorm/SnowStormBundleWriter.cpp.i
-.PHONY : src/SnowStorm/SnowStormBundleWriter.i
+src/SnowStorm/SnowStormBundlePackerForward.i: src/SnowStorm/SnowStormBundlePackerForward.cpp.i
+.PHONY : src/SnowStorm/SnowStormBundlePackerForward.i
 
 # target to preprocess a source file
-src/SnowStorm/SnowStormBundleWriter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.i
-.PHONY : src/SnowStorm/SnowStormBundleWriter.cpp.i
+src/SnowStorm/SnowStormBundlePackerForward.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.i
+.PHONY : src/SnowStorm/SnowStormBundlePackerForward.cpp.i
 
-src/SnowStorm/SnowStormBundleWriter.s: src/SnowStorm/SnowStormBundleWriter.cpp.s
-.PHONY : src/SnowStorm/SnowStormBundleWriter.s
+src/SnowStorm/SnowStormBundlePackerForward.s: src/SnowStorm/SnowStormBundlePackerForward.cpp.s
+.PHONY : src/SnowStorm/SnowStormBundlePackerForward.s
 
 # target to generate assembly for a file
-src/SnowStorm/SnowStormBundleWriter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleWriter.cpp.s
-.PHONY : src/SnowStorm/SnowStormBundleWriter.cpp.s
+src/SnowStorm/SnowStormBundlePackerForward.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormBundlePackerForward.cpp.s
+.PHONY : src/SnowStorm/SnowStormBundlePackerForward.cpp.s
+
+src/SnowStorm/SnowStormBundleSealerBackward.o: src/SnowStorm/SnowStormBundleSealerBackward.cpp.o
+.PHONY : src/SnowStorm/SnowStormBundleSealerBackward.o
+
+# target to build an object file
+src/SnowStorm/SnowStormBundleSealerBackward.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.o
+.PHONY : src/SnowStorm/SnowStormBundleSealerBackward.cpp.o
+
+src/SnowStorm/SnowStormBundleSealerBackward.i: src/SnowStorm/SnowStormBundleSealerBackward.cpp.i
+.PHONY : src/SnowStorm/SnowStormBundleSealerBackward.i
+
+# target to preprocess a source file
+src/SnowStorm/SnowStormBundleSealerBackward.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.i
+.PHONY : src/SnowStorm/SnowStormBundleSealerBackward.cpp.i
+
+src/SnowStorm/SnowStormBundleSealerBackward.s: src/SnowStorm/SnowStormBundleSealerBackward.cpp.s
+.PHONY : src/SnowStorm/SnowStormBundleSealerBackward.s
+
+# target to generate assembly for a file
+src/SnowStorm/SnowStormBundleSealerBackward.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormBundleSealerBackward.cpp.s
+.PHONY : src/SnowStorm/SnowStormBundleSealerBackward.cpp.s
+
+src/SnowStorm/SnowStormBundleSealerForward.o: src/SnowStorm/SnowStormBundleSealerForward.cpp.o
+.PHONY : src/SnowStorm/SnowStormBundleSealerForward.o
+
+# target to build an object file
+src/SnowStorm/SnowStormBundleSealerForward.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.o
+.PHONY : src/SnowStorm/SnowStormBundleSealerForward.cpp.o
+
+src/SnowStorm/SnowStormBundleSealerForward.i: src/SnowStorm/SnowStormBundleSealerForward.cpp.i
+.PHONY : src/SnowStorm/SnowStormBundleSealerForward.i
+
+# target to preprocess a source file
+src/SnowStorm/SnowStormBundleSealerForward.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.i
+.PHONY : src/SnowStorm/SnowStormBundleSealerForward.cpp.i
+
+src/SnowStorm/SnowStormBundleSealerForward.s: src/SnowStorm/SnowStormBundleSealerForward.cpp.s
+.PHONY : src/SnowStorm/SnowStormBundleSealerForward.s
+
+# target to generate assembly for a file
+src/SnowStorm/SnowStormBundleSealerForward.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormBundleSealerForward.cpp.s
+.PHONY : src/SnowStorm/SnowStormBundleSealerForward.cpp.s
 
 src/SnowStorm/SnowStormCountResult.o: src/SnowStorm/SnowStormCountResult.cpp.o
 .PHONY : src/SnowStorm/SnowStormCountResult.o
@@ -329,6 +575,7 @@ src/SnowStorm/SnowStormCountResult.o: src/SnowStorm/SnowStormCountResult.cpp.o
 # target to build an object file
 src/SnowStorm/SnowStormCountResult.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormCountResult.cpp.o
 .PHONY : src/SnowStorm/SnowStormCountResult.cpp.o
 
 src/SnowStorm/SnowStormCountResult.i: src/SnowStorm/SnowStormCountResult.cpp.i
@@ -337,6 +584,7 @@ src/SnowStorm/SnowStormCountResult.i: src/SnowStorm/SnowStormCountResult.cpp.i
 # target to preprocess a source file
 src/SnowStorm/SnowStormCountResult.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormCountResult.cpp.i
 .PHONY : src/SnowStorm/SnowStormCountResult.cpp.i
 
 src/SnowStorm/SnowStormCountResult.s: src/SnowStorm/SnowStormCountResult.cpp.s
@@ -345,7 +593,35 @@ src/SnowStorm/SnowStormCountResult.s: src/SnowStorm/SnowStormCountResult.cpp.s
 # target to generate assembly for a file
 src/SnowStorm/SnowStormCountResult.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormCountResult.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormCountResult.cpp.s
 .PHONY : src/SnowStorm/SnowStormCountResult.cpp.s
+
+src/SnowStorm/SnowStormEngine.o: src/SnowStorm/SnowStormEngine.cpp.o
+.PHONY : src/SnowStorm/SnowStormEngine.o
+
+# target to build an object file
+src/SnowStorm/SnowStormEngine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormEngine.cpp.o
+.PHONY : src/SnowStorm/SnowStormEngine.cpp.o
+
+src/SnowStorm/SnowStormEngine.i: src/SnowStorm/SnowStormEngine.cpp.i
+.PHONY : src/SnowStorm/SnowStormEngine.i
+
+# target to preprocess a source file
+src/SnowStorm/SnowStormEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormEngine.cpp.i
+.PHONY : src/SnowStorm/SnowStormEngine.cpp.i
+
+src/SnowStorm/SnowStormEngine.s: src/SnowStorm/SnowStormEngine.cpp.s
+.PHONY : src/SnowStorm/SnowStormEngine.s
+
+# target to generate assembly for a file
+src/SnowStorm/SnowStormEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormEngine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormEngine.cpp.s
+.PHONY : src/SnowStorm/SnowStormEngine.cpp.s
 
 src/SnowStorm/SnowStormUtils.o: src/SnowStorm/SnowStormUtils.cpp.o
 .PHONY : src/SnowStorm/SnowStormUtils.o
@@ -353,6 +629,7 @@ src/SnowStorm/SnowStormUtils.o: src/SnowStorm/SnowStormUtils.cpp.o
 # target to build an object file
 src/SnowStorm/SnowStormUtils.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormUtils.cpp.o
 .PHONY : src/SnowStorm/SnowStormUtils.cpp.o
 
 src/SnowStorm/SnowStormUtils.i: src/SnowStorm/SnowStormUtils.cpp.i
@@ -361,6 +638,7 @@ src/SnowStorm/SnowStormUtils.i: src/SnowStorm/SnowStormUtils.cpp.i
 # target to preprocess a source file
 src/SnowStorm/SnowStormUtils.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormUtils.cpp.i
 .PHONY : src/SnowStorm/SnowStormUtils.cpp.i
 
 src/SnowStorm/SnowStormUtils.s: src/SnowStorm/SnowStormUtils.cpp.s
@@ -369,6 +647,7 @@ src/SnowStorm/SnowStormUtils.s: src/SnowStorm/SnowStormUtils.cpp.s
 # target to generate assembly for a file
 src/SnowStorm/SnowStormUtils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core.dir/build.make CMakeFiles/peanutbutter_core.dir/src/SnowStorm/SnowStormUtils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_core_tests.dir/build.make CMakeFiles/peanutbutter_core_tests.dir/src/SnowStorm/SnowStormUtils.cpp.s
 .PHONY : src/SnowStorm/SnowStormUtils.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -419,6 +698,30 @@ src/main_runner.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_runner.dir/build.make CMakeFiles/peanutbutter_runner.dir/src/main_runner.cpp.s
 .PHONY : src/main_runner.cpp.s
 
+tests/snowstorm_engine_tests.o: tests/snowstorm_engine_tests.cpp.o
+.PHONY : tests/snowstorm_engine_tests.o
+
+# target to build an object file
+tests/snowstorm_engine_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_tests.dir/build.make CMakeFiles/peanutbutter_tests.dir/tests/snowstorm_engine_tests.cpp.o
+.PHONY : tests/snowstorm_engine_tests.cpp.o
+
+tests/snowstorm_engine_tests.i: tests/snowstorm_engine_tests.cpp.i
+.PHONY : tests/snowstorm_engine_tests.i
+
+# target to preprocess a source file
+tests/snowstorm_engine_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_tests.dir/build.make CMakeFiles/peanutbutter_tests.dir/tests/snowstorm_engine_tests.cpp.i
+.PHONY : tests/snowstorm_engine_tests.cpp.i
+
+tests/snowstorm_engine_tests.s: tests/snowstorm_engine_tests.cpp.s
+.PHONY : tests/snowstorm_engine_tests.s
+
+# target to generate assembly for a file
+tests/snowstorm_engine_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/peanutbutter_tests.dir/build.make CMakeFiles/peanutbutter_tests.dir/tests/snowstorm_engine_tests.cpp.s
+.PHONY : tests/snowstorm_engine_tests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -427,33 +730,60 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... peanutbutter"
 	@echo "... peanutbutter_core"
+	@echo "... peanutbutter_core_tests"
 	@echo "... peanutbutter_runner"
+	@echo "... peanutbutter_tests"
 	@echo "... src/ConfigLoader.o"
 	@echo "... src/ConfigLoader.i"
 	@echo "... src/ConfigLoader.s"
+	@echo "... src/Crypt.o"
+	@echo "... src/Crypt.i"
+	@echo "... src/Crypt.s"
+	@echo "... src/FileCompare.o"
+	@echo "... src/FileCompare.i"
+	@echo "... src/FileCompare.s"
 	@echo "... src/Globals.o"
 	@echo "... src/Globals.i"
 	@echo "... src/Globals.s"
+	@echo "... src/SandStorm/EncryptionLayer.o"
+	@echo "... src/SandStorm/EncryptionLayer.i"
+	@echo "... src/SandStorm/EncryptionLayer.s"
+	@echo "... src/SandStorm/PasswordCiper.o"
+	@echo "... src/SandStorm/PasswordCiper.i"
+	@echo "... src/SandStorm/PasswordCiper.s"
 	@echo "... src/SandStorm/SandStorm.o"
 	@echo "... src/SandStorm/SandStorm.i"
 	@echo "... src/SandStorm/SandStorm.s"
+	@echo "... src/SandStorm/SplintCipher.o"
+	@echo "... src/SandStorm/SplintCipher.i"
+	@echo "... src/SandStorm/SplintCipher.s"
 	@echo "... src/SandStorm/TaylorCipher.o"
 	@echo "... src/SandStorm/TaylorCipher.i"
 	@echo "... src/SandStorm/TaylorCipher.s"
-	@echo "... src/SnowStorm/SnowStorm.o"
-	@echo "... src/SnowStorm/SnowStorm.i"
-	@echo "... src/SnowStorm/SnowStorm.s"
-	@echo "... src/SnowStorm/SnowStormBundleReader.o"
-	@echo "... src/SnowStorm/SnowStormBundleReader.i"
-	@echo "... src/SnowStorm/SnowStormBundleReader.s"
-	@echo "... src/SnowStorm/SnowStormBundleWriter.o"
-	@echo "... src/SnowStorm/SnowStormBundleWriter.i"
-	@echo "... src/SnowStorm/SnowStormBundleWriter.s"
+	@echo "... src/SandStorm/WeaveCipher.o"
+	@echo "... src/SandStorm/WeaveCipher.i"
+	@echo "... src/SandStorm/WeaveCipher.s"
+	@echo "... src/SnowStorm/SnowStormBundlePackerBackward.o"
+	@echo "... src/SnowStorm/SnowStormBundlePackerBackward.i"
+	@echo "... src/SnowStorm/SnowStormBundlePackerBackward.s"
+	@echo "... src/SnowStorm/SnowStormBundlePackerForward.o"
+	@echo "... src/SnowStorm/SnowStormBundlePackerForward.i"
+	@echo "... src/SnowStorm/SnowStormBundlePackerForward.s"
+	@echo "... src/SnowStorm/SnowStormBundleSealerBackward.o"
+	@echo "... src/SnowStorm/SnowStormBundleSealerBackward.i"
+	@echo "... src/SnowStorm/SnowStormBundleSealerBackward.s"
+	@echo "... src/SnowStorm/SnowStormBundleSealerForward.o"
+	@echo "... src/SnowStorm/SnowStormBundleSealerForward.i"
+	@echo "... src/SnowStorm/SnowStormBundleSealerForward.s"
 	@echo "... src/SnowStorm/SnowStormCountResult.o"
 	@echo "... src/SnowStorm/SnowStormCountResult.i"
 	@echo "... src/SnowStorm/SnowStormCountResult.s"
+	@echo "... src/SnowStorm/SnowStormEngine.o"
+	@echo "... src/SnowStorm/SnowStormEngine.i"
+	@echo "... src/SnowStorm/SnowStormEngine.s"
 	@echo "... src/SnowStorm/SnowStormUtils.o"
 	@echo "... src/SnowStorm/SnowStormUtils.i"
 	@echo "... src/SnowStorm/SnowStormUtils.s"
@@ -463,6 +793,9 @@ help:
 	@echo "... src/main_runner.o"
 	@echo "... src/main_runner.i"
 	@echo "... src/main_runner.s"
+	@echo "... tests/snowstorm_engine_tests.o"
+	@echo "... tests/snowstorm_engine_tests.i"
+	@echo "... tests/snowstorm_engine_tests.s"
 .PHONY : help
 
 

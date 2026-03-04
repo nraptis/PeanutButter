@@ -1,0 +1,6 @@
+set(__QT_DEPLOY_TARGET_peanutbutter_core_FILE /Users/naraptis/Desktop/PeanutButter/build/libpeanutbutter_core.a)
+set(__QT_DEPLOY_TARGET_peanutbutter_core_TYPE STATIC_LIBRARY)
+set(__QT_DEPLOY_TARGET_peanutbutter_runner_FILE /Users/naraptis/Desktop/PeanutButter/build/peanutbutter_runner)
+set(__QT_DEPLOY_TARGET_peanutbutter_runner_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_peanutbutter_FILE /Users/naraptis/Desktop/PeanutButter/build/peanutbutter)
+set(__QT_DEPLOY_TARGET_peanutbutter_TYPE EXECUTABLE)

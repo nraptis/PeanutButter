@@ -27,20 +27,38 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/release")
 set(PEANUTBUTTER_CORE_SOURCES
   src/Globals.cpp
   src/ConfigLoader.cpp
-  src/SnowStorm/SnowStorm.cpp
+  src/Crypt.cpp
+  src/FileCompare.cpp
+  src/SnowStorm/SnowStormEngine.cpp
   src/SnowStorm/SnowStormUtils.cpp
   src/SnowStorm/SnowStormCountResult.cpp
-  src/SnowStorm/SnowStormBundleWriter.cpp
-  src/SnowStorm/SnowStormBundleReader.cpp
+  src/SnowStorm/SnowStormBundleSealerForward.cpp
+  src/SnowStorm/SnowStormBundleSealerBackward.cpp
+  src/SnowStorm/SnowStormBundlePackerForward.cpp
+  src/SnowStorm/SnowStormBundlePackerBackward.cpp
+  src/SandStorm/EncryptionLayer.cpp
+  src/SandStorm/PasswordCiper.cpp
   src/SandStorm/SandStorm.cpp
+  src/SandStorm/SplintCipher.cpp
   src/SandStorm/TaylorCipher.cpp
+  src/SandStorm/WeaveCipher.cpp
 )
 
 add_library(peanutbutter_core STATIC ${PEANUTBUTTER_CORE_SOURCES})
 target_include_directories(peanutbutter_core PUBLIC src)
 
+add_library(peanutbutter_core_tests STATIC ${PEANUTBUTTER_CORE_SOURCES})
+target_include_directories(peanutbutter_core_tests PUBLIC src)
+target_compile_definitions(peanutbutter_core_tests PRIVATE PEANUTBUTTER_UNIT_TEST_MODE=1)
+
 add_executable(peanutbutter_runner src/main_runner.cpp)
 target_link_libraries(peanutbutter_runner PRIVATE peanutbutter_core)
+
+enable_testing()
+add_executable(peanutbutter_tests tests/snowstorm_engine_tests.cpp)
+target_compile_definitions(peanutbutter_tests PRIVATE PEANUTBUTTER_UNIT_TEST_MODE=1)
+target_link_libraries(peanutbutter_tests PRIVATE peanutbutter_core_tests)
+add_test(NAME peanutbutter_tests COMMAND peanutbutter_tests)
 
 find_package(Qt6 COMPONENTS Widgets QUIET)
 if (Qt6_FOUND)

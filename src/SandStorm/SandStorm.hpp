@@ -3,10 +3,10 @@
 #include <cstdint>
 #include <string>
 
-#include "Encryptable.hpp"
-#include "SandStorm/TaylorCipher.hpp"
+#include "Cipher.hpp"
+#include "TaylorCipher.hpp"
 
-class SandStorm : public Encryptable {
+class SandStorm : public Cipher {
 public:
   SandStorm(std::uint64_t pBlockSize,
             std::u32string pPassword1,
