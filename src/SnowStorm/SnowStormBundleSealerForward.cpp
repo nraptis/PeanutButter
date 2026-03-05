@@ -2,15 +2,15 @@
 
 #include <cstring>
 
-#include "Crypt.hpp"
-
-SnowStormBundleSealerForward::SnowStormBundleSealerForward()
-    : mLayer1(Crypt::getEncryptionLayer1()),
-      mLayer2(Crypt::getEncryptionLayer2()),
-      mLayer3(Crypt::getEncryptionLayer3()),
+SnowStormBundleSealerForward::SnowStormBundleSealerForward(EncryptionLayer* pLayer1,
+                                                           EncryptionLayer* pLayer2,
+                                                           EncryptionLayer* pLayer3)
+    : mLayer1(pLayer1),
+      mLayer2(pLayer2),
+      mLayer3(pLayer3),
       mBufferSealed(BLOCK_SIZE_LAYER_3, 0),
-      mBufferLayer1Unencrypted(BLOCK_SIZE_LAYER_3, 0),
-      mBufferLayer1Encrypted(BLOCK_SIZE_LAYER_3, 0) {
+      mBufferA(BLOCK_SIZE_LAYER_3, 0),
+      mBufferB(BLOCK_SIZE_LAYER_3, 0) {
 }
 
 bool SnowStormBundleSealerForward::sealPage(const unsigned char* pPage, std::string* pError) {
@@ -27,11 +27,11 @@ bool SnowStormBundleSealerForward::sealPage(const unsigned char* pPage, std::str
     return false;
   }
 
-  std::memcpy(mBufferLayer1Unencrypted.data(), pPage, BLOCK_SIZE_LAYER_3);
+  std::memcpy(mBufferA.data(), pPage, BLOCK_SIZE_LAYER_3);
 
   for (std::size_t aOffset = 0; aOffset < BLOCK_SIZE_LAYER_3; aOffset += BLOCK_SIZE_LAYER_1) {
-    if (!mLayer1->encrypt(mBufferLayer1Unencrypted.data() + aOffset,
-                          mBufferLayer1Encrypted.data() + aOffset,
+    if (!mLayer1->encrypt(mBufferA.data() + aOffset,
+                          mBufferB.data() + aOffset,
                           BLOCK_SIZE_LAYER_1,
                           pError)) {
       if (pError != nullptr && pError->empty()) {
@@ -42,8 +42,8 @@ bool SnowStormBundleSealerForward::sealPage(const unsigned char* pPage, std::str
   }
 
   for (std::size_t aOffset = 0; aOffset < BLOCK_SIZE_LAYER_3; aOffset += BLOCK_SIZE_LAYER_2) {
-    if (!mLayer2->encrypt(mBufferLayer1Encrypted.data() + aOffset,
-                          mBufferLayer1Unencrypted.data() + aOffset,
+    if (!mLayer2->encrypt(mBufferB.data() + aOffset,
+                          mBufferA.data() + aOffset,
                           BLOCK_SIZE_LAYER_2,
                           pError)) {
       if (pError != nullptr && pError->empty()) {
@@ -53,7 +53,7 @@ bool SnowStormBundleSealerForward::sealPage(const unsigned char* pPage, std::str
     }
   }
 
-  if (!mLayer3->encrypt(mBufferLayer1Unencrypted.data(), mBufferSealed.data(), BLOCK_SIZE_LAYER_3, pError)) {
+  if (!mLayer3->encrypt(mBufferA.data(), mBufferSealed.data(), BLOCK_SIZE_LAYER_3, pError)) {
     if (pError != nullptr && pError->empty()) {
       *pError = "Layer3 encryption failed";
     }
@@ -63,6 +63,6 @@ bool SnowStormBundleSealerForward::sealPage(const unsigned char* pPage, std::str
 }
 
 bool SnowStormBundleSealerForward::sealZeroPage(std::string* pError) {
-  std::memset(mBufferLayer1Unencrypted.data(), 0, sizeof(mBufferLayer1Unencrypted));
-  return sealPage(mBufferLayer1Unencrypted.data(), pError);
+  std::memset(mBufferA.data(), 0, sizeof(mBufferA));
+  return sealPage(mBufferA.data(), pError);
 }

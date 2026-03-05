@@ -12,6 +12,4 @@ bool Test(const LogStream& pLogStream,
           const std::filesystem::path& pSource,
           const std::filesystem::path& pDestination,
           std::string* pError = nullptr);
-
-}  // namespace FileCompare
-
+}

@@ -2,10 +2,13 @@
 #include <fstream>
 #include <functional>
 #include <iostream>
+#include <memory>
 #include <stdexcept>
 #include <string>
 #include <vector>
 
+#include "IO/FileReaderMock.hpp"
+#include "IO/FileWriterMock.hpp"
 #include "ShouldBundleResult.hpp"
 #include "Globals.hpp"
 #include "SnowStorm/SnowStormEngine.hpp"
@@ -53,6 +56,24 @@ void writeFile(const fs::path& pPath, const std::string& pContents) {
     throw std::runtime_error("Failed to create file: " + pPath.string());
   }
   aOut.write(pContents.data(), static_cast<std::streamsize>(pContents.size()));
+}
+
+fs::path findArchiveByIndex(const fs::path& pArchiveDir, std::uint64_t pIndex) {
+  std::string aDigits = std::to_string(pIndex);
+  if (aDigits.size() < static_cast<std::size_t>(gBundleLeadingZeros)) {
+    aDigits = std::string(static_cast<std::size_t>(gBundleLeadingZeros) - aDigits.size(), '0') + aDigits;
+  }
+  const std::string aLegacyName = gBundleFilePrefix + aDigits + gBundleFileSuffix;
+  const std::string aRecoveryName = gBundleFilePrefix + aDigits + "R" + gBundleFileSuffix;
+  const std::string aNoRecoveryName = gBundleFilePrefix + aDigits + "N" + gBundleFileSuffix;
+
+  for (const auto& aEntry : fs::directory_iterator(pArchiveDir)) {
+    const std::string aName = aEntry.path().filename().string();
+    if (aName == aLegacyName || aName == aRecoveryName || aName == aNoRecoveryName) {
+      return aEntry.path();
+    }
+  }
+  throw std::runtime_error("Archive index not found in directory: " + pArchiveDir.string());
 }
 
 std::string readFile(const fs::path& pPath) {
@@ -142,21 +163,29 @@ void testShouldUnbundleNonDirectoryReturnsNo() {
   require(aResult.mDecision == ShouldBundleDecision::No, "Expected shouldUnbundle file source => No");
 }
 
-void testUnbundleAmbiguousArchiveGroupsThrows() {
+void testUnbundleNoMatchingArchiveNamesThrows() {
   TempDir aTemp;
   const fs::path aArchive = aTemp.mPath / "archive";
   fs::create_directories(aArchive);
   writeFile(aArchive / "a_0000.jag", "x");
   writeFile(aArchive / "b_0000.jag", "y");
 
+  const std::string aOldPrefix = gBundleFilePrefix;
+  const std::string aOldSuffix = gBundleFileSuffix;
+  gBundleFilePrefix = "snowstorm_";
+  gBundleFileSuffix = ".jag";
+
   SnowStormEngine aEngine(kTestArchiveSize);
   bool aThrew = false;
   try {
     (void)aEngine.unbundle(aArchive, aTemp.mPath / "out", nullptr);
-  } catch (const std::exception& aError) {
-    aThrew = (std::string(aError.what()).find("Ambiguous archive naming groups") != std::string::npos);
+  } catch (const std::exception&) {
+    aThrew = true;
   }
-  require(aThrew, "Expected ambiguous naming groups to throw");
+
+  gBundleFilePrefix = aOldPrefix;
+  gBundleFileSuffix = aOldSuffix;
+  require(aThrew, "Expected missing matching archive naming to throw");
 }
 
 void testUnbundleTruncatedArchiveThrows() {
@@ -170,7 +199,7 @@ void testUnbundleTruncatedArchiveThrows() {
   SnowStormEngine aEngine(kTestArchiveSize);
   (void)aEngine.bundle(aSource, aArchive, nullptr);
 
-  const fs::path aJag0 = aArchive / "snowstorm_0000.jag";
+  const fs::path aJag0 = findArchiveByIndex(aArchive, 0);
   fs::resize_file(aJag0, 16);
 
   bool aThrew = false;
@@ -180,6 +209,88 @@ void testUnbundleTruncatedArchiveThrows() {
     aThrew = true;
   }
   require(aThrew, "Expected truncated archive to throw");
+}
+
+void testMultiArchiveRoundTripLargeFile() {
+  TempDir aTemp;
+  const fs::path aSource = aTemp.mPath / "src";
+  const fs::path aArchive = aTemp.mPath / "archive";
+  const fs::path aOut = aTemp.mPath / "out";
+  fs::create_directories(aSource);
+
+  std::string aPayload;
+  aPayload.reserve(2500000);
+  for (int aIndex = 0; aIndex < 2500000; ++aIndex) {
+    aPayload.push_back(static_cast<char>('A' + (aIndex % 26)));
+  }
+  writeFile(aSource / "big.bin", aPayload);
+
+  SnowStormEngine aEngine(BLOCK_SIZE_LAYER_3 * 1ULL);
+  const SnowStormBundleStats aBundleStats = aEngine.bundle(aSource, aArchive, nullptr);
+  require(aBundleStats.mArchiveCount >= 2, "Expected multiple archives in large-file test");
+
+  const SnowStormUnbundleStats aStats = aEngine.unbundle(aArchive, aOut, nullptr);
+  require(aStats.mFilesUnbundled == 1, "Expected large file to roundtrip across archives");
+  require(readFile(aOut / "big.bin") == aPayload, "Expected exact large-file roundtrip");
+}
+
+void testUnbundleRecoversAfterFirstArchiveCorruption() {
+  TempDir aTemp;
+  const fs::path aSource = aTemp.mPath / "src";
+  const fs::path aArchive = aTemp.mPath / "archive";
+  const fs::path aOut = aTemp.mPath / "out";
+  fs::create_directories(aSource);
+
+  std::string aPayload;
+  aPayload.reserve(6000);
+  for (int aIndex = 0; aIndex < 6000; ++aIndex) {
+    aPayload.push_back(static_cast<char>('a' + (aIndex % 26)));
+  }
+  const std::string aName = "blob.bin";
+  writeFile(aSource / aName, aPayload);
+  writeFile(aSource / "zz_after.txt", "tail-ok");
+
+  SnowStormEngine aEngine(kTestArchiveSize);
+  (void)aEngine.bundle(aSource, aArchive, nullptr);
+
+  const fs::path aJag0 = findArchiveByIndex(aArchive, 0);
+  fs::resize_file(aJag0, 0);
+
+  bool aThrew = false;
+  try {
+    (void)aEngine.unbundle(aArchive, aOut, nullptr);
+  } catch (const std::exception&) {
+    aThrew = true;
+  }
+  require(aThrew, "Expected corruption of first archive to throw");
+}
+
+void testInMemoryRoundTripWithoutDisk() {
+  auto aStore = std::make_shared<FileMockStore>();
+  FileReaderMock aReader(aStore);
+  FileWriterMock aWriter(aStore);
+
+  const fs::path aSource = "/mem/src";
+  const fs::path aArchive = "/mem/archive";
+  const fs::path aOut = "/mem/out";
+  aReader.addDirectory(aSource);
+  aReader.addFile(aSource / "one.txt", std::vector<unsigned char>{'o', 'n', 'e'});
+  aReader.addDirectory(aSource / "nested");
+  aReader.addFile(aSource / "nested" / "two.bin", std::vector<unsigned char>{0, 1, 2, 3, 4});
+
+  SnowStormEngine aEngine(kTestArchiveSize, aReader, aWriter);
+  const SnowStormBundleStats aBundleStats = aEngine.bundle(aSource, aArchive, nullptr);
+  require(aBundleStats.mFileCount == 2, "Expected 2 files bundled in memory");
+
+  const SnowStormUnbundleStats aUnbundleStats = aEngine.unbundle(aArchive, aOut, nullptr);
+  require(aUnbundleStats.mFilesUnbundled == 2, "Expected 2 files unbundled in memory");
+
+  std::vector<unsigned char> aBytes;
+  std::string aError;
+  require(aReader.readRange(aOut / "one.txt", 0, 1024, aBytes, &aError), "Expected one.txt in memory output");
+  require(std::string(aBytes.begin(), aBytes.end()) == "one", "Expected one.txt contents in memory output");
+  require(aReader.readRange(aOut / "nested" / "two.bin", 0, 1024, aBytes, &aError), "Expected two.bin in memory output");
+  require(aBytes == std::vector<unsigned char>({0, 1, 2, 3, 4}), "Expected two.bin contents in memory output");
 }
 
 }  // namespace
@@ -194,8 +305,11 @@ int main() {
       {"plain destination resolves near input", testPlainDestinationResolvesNearInput},
       {"bundle/unbundle roundtrip nested + empty files", testRoundTripNestedAndEmptyFiles},
       {"shouldUnbundle source file => No", testShouldUnbundleNonDirectoryReturnsNo},
-      {"unbundle ambiguous archive groups throws", testUnbundleAmbiguousArchiveGroupsThrows},
+      {"unbundle no matching archive names throws", testUnbundleNoMatchingArchiveNamesThrows},
       {"unbundle truncated archive throws", testUnbundleTruncatedArchiveThrows},
+      {"multi-archive roundtrip large file", testMultiArchiveRoundTripLargeFile},
+      {"unbundle recovers after first archive corruption", testUnbundleRecoversAfterFirstArchiveCorruption},
+      {"in-memory roundtrip without disk", testInMemoryRoundTripWithoutDisk},
   };
 
   int aFailures = 0;

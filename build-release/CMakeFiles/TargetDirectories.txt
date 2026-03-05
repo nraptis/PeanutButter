@@ -1,8 +1,0 @@
-/Users/naraptis/Desktop/PeanutButter/build-release/CMakeFiles/peanutbutter_core.dir
-/Users/naraptis/Desktop/PeanutButter/build-release/CMakeFiles/peanutbutter_core_tests.dir
-/Users/naraptis/Desktop/PeanutButter/build-release/CMakeFiles/peanutbutter_runner.dir
-/Users/naraptis/Desktop/PeanutButter/build-release/CMakeFiles/peanutbutter_tests.dir
-/Users/naraptis/Desktop/PeanutButter/build-release/CMakeFiles/peanutbutter.dir
-/Users/naraptis/Desktop/PeanutButter/build-release/CMakeFiles/test.dir
-/Users/naraptis/Desktop/PeanutButter/build-release/CMakeFiles/edit_cache.dir
-/Users/naraptis/Desktop/PeanutButter/build-release/CMakeFiles/rebuild_cache.dir

@@ -24,12 +24,19 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/release")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/release")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/release")
 
+# Active code only: files under src/Deprecated are intentionally excluded from normal builds.
 set(PEANUTBUTTER_CORE_SOURCES
   src/Globals.cpp
   src/ConfigLoader.cpp
-  src/Crypt.cpp
   src/FileCompare.cpp
+  src/IO/FileReaderImplementation.cpp
+  src/IO/FileWriterImplementation.cpp
+  src/IO/FileReaderMock.cpp
+  src/IO/FileWriterMock.cpp
+  src/PeanutButterImplementation.cpp
   src/SnowStorm/SnowStormEngine.cpp
+  src/LayeredEncryption/LayeredEncryptionImplementation.cpp
+  src/LayeredEncryption/LayeredEncryptionMockEmpty.cpp
   src/SnowStorm/SnowStormUtils.cpp
   src/SnowStorm/SnowStormCountResult.cpp
   src/SnowStorm/SnowStormBundleSealerForward.cpp
@@ -38,9 +45,8 @@ set(PEANUTBUTTER_CORE_SOURCES
   src/SnowStorm/SnowStormBundlePackerBackward.cpp
   src/SandStorm/EncryptionLayer.cpp
   src/SandStorm/PasswordCiper.cpp
-  src/SandStorm/SandStorm.cpp
+  src/SandStorm/ReverseCipher.cpp
   src/SandStorm/SplintCipher.cpp
-  src/SandStorm/TaylorCipher.cpp
   src/SandStorm/WeaveCipher.cpp
 )
 
@@ -54,11 +60,31 @@ target_compile_definitions(peanutbutter_core_tests PRIVATE PEANUTBUTTER_UNIT_TES
 add_executable(peanutbutter_runner src/main_runner.cpp)
 target_link_libraries(peanutbutter_runner PRIVATE peanutbutter_core)
 
+add_executable(recovery_runner src/recovery_runner.cpp)
+target_link_libraries(recovery_runner PRIVATE peanutbutter_core)
+
 enable_testing()
 add_executable(peanutbutter_tests tests/snowstorm_engine_tests.cpp)
 target_compile_definitions(peanutbutter_tests PRIVATE PEANUTBUTTER_UNIT_TEST_MODE=1)
 target_link_libraries(peanutbutter_tests PRIVATE peanutbutter_core_tests)
 add_test(NAME peanutbutter_tests COMMAND peanutbutter_tests)
+
+add_executable(TestMockFileWriterAndReader tests/TestMockFileWriterAndReader.cpp)
+target_compile_definitions(TestMockFileWriterAndReader PRIVATE PEANUTBUTTER_UNIT_TEST_MODE=1)
+target_link_libraries(TestMockFileWriterAndReader PRIVATE peanutbutter_core_tests)
+add_test(NAME TestMockFileWriterAndReader COMMAND TestMockFileWriterAndReader)
+
+add_executable(Test100RealRunsNoEncryption tests/Test100RealRunsNoEncryption.cpp)
+target_compile_definitions(Test100RealRunsNoEncryption PRIVATE PEANUTBUTTER_UNIT_TEST_MODE=1)
+target_compile_definitions(Test100RealRunsNoEncryption PRIVATE PEANUTBUTTER_SOURCE_DIR="${CMAKE_SOURCE_DIR}")
+target_link_libraries(Test100RealRunsNoEncryption PRIVATE peanutbutter_core_tests)
+add_test(NAME Test100RealRunsNoEncryption COMMAND Test100RealRunsNoEncryption)
+
+add_executable(Test100MockRunsNoEncryption tests/Test100MockRunsNoEncryption.cpp)
+target_compile_definitions(Test100MockRunsNoEncryption PRIVATE PEANUTBUTTER_UNIT_TEST_MODE=1)
+target_compile_definitions(Test100MockRunsNoEncryption PRIVATE PEANUTBUTTER_SOURCE_DIR="${CMAKE_SOURCE_DIR}")
+target_link_libraries(Test100MockRunsNoEncryption PRIVATE peanutbutter_core_tests)
+add_test(NAME Test100MockRunsNoEncryption COMMAND Test100MockRunsNoEncryption)
 
 find_package(Qt6 COMPONENTS Widgets QUIET)
 if (Qt6_FOUND)

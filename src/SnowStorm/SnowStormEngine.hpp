@@ -3,11 +3,16 @@
 #include <cstdint>
 #include <filesystem>
 #include <functional>
+#include <memory>
 #include <string>
 #include <vector>
 
 #include "ShouldBundleResult.hpp"
+#include "LayeredEncryption/LayeredEncryptionDelegate.hpp"
 #include "SnowStorm/SnowStormBundleStats.hpp"
+
+class FileReaderDelegate;
+class FileWriterDelegate;
 
 class SnowStormEngine {
 public:
@@ -17,6 +22,13 @@ public:
                                                      std::uint64_t files_total)>;
 
   explicit SnowStormEngine(std::uint64_t pStorageFileSize);
+  SnowStormEngine(std::uint64_t pStorageFileSize,
+                  FileReaderDelegate& pReader,
+                  FileWriterDelegate& pWriter);
+  SnowStormEngine(std::uint64_t pStorageFileSize,
+                  FileReaderDelegate& pReader,
+                  FileWriterDelegate& pWriter,
+                  LayeredEncryptionDelegate& pLayeredEncryption);
 
   ShouldBundleResult shouldBundle(const std::filesystem::path& pSource,
                                   const std::filesystem::path& pDestination) const;
@@ -30,7 +42,9 @@ public:
 
   SnowStormUnbundleStats unbundle(const std::filesystem::path& pSourceDirectory,
                                   const std::filesystem::path& pDestinationDirectory,
-                                  SnowStormProgressMethod pProgress);
+                                  SnowStormProgressMethod pProgress,
+                                  std::uint64_t pStartArchiveIndex = 0,
+                                  std::uint64_t pStartByteOffsetInArchive = 0);
 
   bool ExecuteBundle(const std::filesystem::path& pSourceDirectory,
                      const std::filesystem::path& pDestinationDirectory,
@@ -42,21 +56,14 @@ public:
                        const std::filesystem::path& pDestinationDirectory,
                        SnowStormProgressMethod pProgress,
                        SnowStormUnbundleStats& pStats,
-                       std::string* pError);
+                       std::string* pError,
+                       std::uint64_t pStartArchiveIndex = 0,
+                       std::uint64_t pStartByteOffsetInArchive = 0);
 
 private:
-  void writeFileEntry(const std::filesystem::path& pFilePath,
-                      const std::function<void(const char*, std::uint64_t)>& pWriteBytes,
-                      std::uint64_t& pFilesDone) const;
-  void writeFolderEntry(const std::filesystem::path& pDirectory,
-                        const std::function<void(const char*, std::uint64_t)>& pWriteBytes,
-                        const std::function<void(std::uint64_t)>& pSetFilesDone,
-                        std::uint64_t& pFilesDone) const;
-  std::string readEntryName(const std::function<std::vector<char>(std::uint64_t)>& pReadExact) const;
-  void unbundleDirectory(const std::filesystem::path& pDestination,
-                         const std::function<std::vector<char>(std::uint64_t)>& pReadExact,
-                         const std::function<void(std::uint64_t)>& pSetFilesDone,
-                         std::vector<std::filesystem::path>& pCreatedFiles,
-                         std::uint64_t& pFilesDone) const;
   std::uint64_t mStorageFileSize = 0;
+  FileReaderDelegate* mReader = nullptr;
+  FileWriterDelegate* mWriter = nullptr;
+  LayeredEncryptionDelegate* mLayeredEncryption = nullptr;
+  std::unique_ptr<LayeredEncryptionDelegate> mOwnedLayeredEncryption;
 };

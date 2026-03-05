@@ -1,0 +1,60 @@
+# file_anatomy_small
+
+Assumptions used for this anatomy:
+- `RECOVERY_CHUNK_SIZE = 6`
+- `BLOCK_SIZE_LAYER_1 = 8 + RECOVERY_CHUNK_SIZE = 14`
+- `BLOCK_SIZE_LAYER_2 = 28`
+- `BLOCK_SIZE_LAYER_3 = 56`
+- Archive size (`mStorageFileSize`) = `BLOCK_SIZE_LAYER_1 * 4 = 56`
+- One input file at root: `cat.txt` with bytes `"meow meow"` (9 bytes)
+- Encryption layers are no-op (so page bytes are unchanged)
+
+## Files created
+Only one archive file is created:
+- `snowstorm_0000N.jag`
+
+Why `N`:
+- Plain header field `first_file_offset_in_archive` is set to `0` for the first archive.
+- Current naming marks recovery-valid archives only when offset is `> 0` and `< (archive_size - 16)`.
+- With offset `0`, this archive is marked `N`.
+
+## Logical file record stream (before L1 framing)
+Single file record is:
+- name length (`u16 LE`): `07 00`
+- name bytes (`"cat.txt"`): `63 61 74 2E 74 78 74`
+- file size (`u64 LE`, value 9): `09 00 00 00 00 00 00 00`
+- file payload (`"meow meow"`): `6D 65 6F 77 20 6D 65 6F 77`
+
+Total logical bytes: `2 + 7 + 8 + 9 = 26`.
+
+## L1 framing inside one page
+Each L1 block is 14 bytes:
+- 6-byte L1 recovery header (`writeUInt48(next_file_offset)`)
+- 8-byte payload chunk
+
+For this one-file case, every L1 header uses the same random 48-bit marker (non-zero), call it `M`:
+- `M = m0 m1 m2 m3 m4 m5` (little-endian bytes)
+
+Payload capacity in one page = `4 * 8 = 32` bytes.
+Logical stream is 26 bytes, so 6 bytes of trailing zero padding are added.
+
+### Four L1 blocks written into page (56 bytes total)
+- Block 0: `M | 07 00 63 61 74 2E 74 78`
+- Block 1: `M | 74 09 00 00 00 00 00 00`
+- Block 2: `M | 00 6D 65 6F 77 20 6D 65`
+- Block 3: `M | 6F 77 00 00 00 00 00 00`
+
+## Archive file on disk layout
+The archive file contains:
+
+1) **Plain 16-byte archive header** at file offset `0x00`:
+- Magic `PBFH`: `50 42 46 48`
+- Version (`u16`): `01 00`
+- Reserved (`u16`): `00 00`
+- First-file offset (`u64 LE`): `00 00 00 00 00 00 00 00`
+
+2) **One full page** (56 bytes) appended after header at offset `0x10`:
+- bytes = the 4 framed L1 blocks shown above
+
+Final file size:
+- `16 + 56 = 72` bytes

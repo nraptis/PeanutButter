@@ -1,7 +1,6 @@
 #pragma once
 
 #include <cstdint>
-#include <memory>
 #include <string>
 #include <vector>
 
@@ -10,16 +9,16 @@
 
 class SnowStormBundleSealerBackward {
 public:
-  SnowStormBundleSealerBackward();
+  SnowStormBundleSealerBackward(EncryptionLayer* pLayer1, EncryptionLayer* pLayer2, EncryptionLayer* pLayer3);
 
-  bool decryptLayer3Page(const unsigned char* pInputPage,
-                         unsigned char* pOutputPage,
-                         std::string* pError);
+  bool unsealPage(const unsigned char* pInputPage,
+                  unsigned char* pOutputPage,
+                  std::string* pError);
 
 private:
-  std::unique_ptr<EncryptionLayer> mLayer1;
-  std::unique_ptr<EncryptionLayer> mLayer2;
-  std::unique_ptr<EncryptionLayer> mLayer3;
-  std::vector<unsigned char> mBufferTierA;
-  std::vector<unsigned char> mBufferTierB;
+  EncryptionLayer* mLayer1 = nullptr;
+  EncryptionLayer* mLayer2 = nullptr;
+  EncryptionLayer* mLayer3 = nullptr;
+  std::vector<unsigned char> mBufferA;
+  std::vector<unsigned char> mBufferB;
 };

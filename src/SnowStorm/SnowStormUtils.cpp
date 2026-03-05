@@ -9,7 +9,16 @@
 namespace SnowStormUtils {
 
 bool shouldIgnoreEntry(const fs::path& pPath) {
-  (void)pPath;
+  const std::string aName = pPath.filename().string();
+  if (aName.empty()) {
+    return false;
+  }
+  if (aName == ".DS_Store" || aName == "Thumbs.db") {
+    return true;
+  }
+  if (aName.rfind("._", 0) == 0) {
+    return true;
+  }
   return false;
 }
 
@@ -18,7 +27,16 @@ std::string bundleName(std::uint64_t pIndex) {
   if (aIndexText.size() < static_cast<std::size_t>(gBundleLeadingZeros)) {
     aIndexText = std::string(static_cast<std::size_t>(gBundleLeadingZeros) - aIndexText.size(), '0') + aIndexText;
   }
-  return std::string("snowstorm_") + aIndexText + ".jag";
+  return gBundleFilePrefix + aIndexText + gBundleFileSuffix;
+}
+
+std::string bundleNameWithRecoveryMarker(std::uint64_t pIndex, bool pHasRecoveryStart) {
+  std::string aIndexText = std::to_string(pIndex);
+  if (aIndexText.size() < static_cast<std::size_t>(gBundleLeadingZeros)) {
+    aIndexText = std::string(static_cast<std::size_t>(gBundleLeadingZeros) - aIndexText.size(), '0') + aIndexText;
+  }
+  const char aMarker = pHasRecoveryStart ? 'R' : 'N';
+  return gBundleFilePrefix + aIndexText + aMarker + gBundleFileSuffix;
 }
 
 bool hasMeaningfulEntries(const fs::path& pDirectory) {
@@ -34,6 +52,13 @@ void writeUInt16(std::vector<char>& pOut, std::uint16_t pValue) {
   pOut.push_back(static_cast<char>((pValue >> 8) & 0xFF));
 }
 
+void writeUInt48(std::vector<char>& pOut, std::uint64_t pValue) {
+  const std::uint64_t aMasked = pValue & 0x0000FFFFFFFFFFFFULL;
+  for (int aShift = 0; aShift < 6; ++aShift) {
+    pOut.push_back(static_cast<char>((aMasked >> (aShift * 8)) & 0xFF));
+  }
+}
+
 void writeUInt64(std::vector<char>& pOut, std::uint64_t pValue) {
   for (int aShift = 0; aShift < 8; ++aShift) {
     pOut.push_back(static_cast<char>((pValue >> (aShift * 8)) & 0xFF));
@@ -43,6 +68,14 @@ void writeUInt64(std::vector<char>& pOut, std::uint64_t pValue) {
 std::uint16_t readUInt16(const std::vector<char>& pRaw) {
   return static_cast<std::uint16_t>(static_cast<unsigned char>(pRaw[0])) |
          static_cast<std::uint16_t>(static_cast<unsigned char>(pRaw[1]) << 8);
+}
+
+std::uint64_t readUInt48(const std::vector<char>& pRaw) {
+  std::uint64_t aValue = 0;
+  for (int aIndex = 0; aIndex < 6; ++aIndex) {
+    aValue |= static_cast<std::uint64_t>(static_cast<unsigned char>(pRaw[static_cast<std::size_t>(aIndex)])) << (aIndex * 8);
+  }
+  return aValue;
 }
 
 std::uint64_t readUInt64(const std::vector<char>& pRaw) {

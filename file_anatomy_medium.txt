@@ -1,0 +1,138 @@
+# file_anatomy_medium
+
+Assumptions used for this anatomy:
+- `RECOVERY_CHUNK_SIZE = 6`
+- `BLOCK_SIZE_LAYER_1 = 8 + RECOVERY_CHUNK_SIZE = 14`
+- `BLOCK_SIZE_LAYER_2 = 28`
+- `BLOCK_SIZE_LAYER_3 = 56`
+- Archive size (`mStorageFileSize`) = `BLOCK_SIZE_LAYER_1 * 4 = 56`
+- Encryption layers are no-op (plain page bytes are written as-is)
+- Input files considered are the text files you placed in `input_for_medium_anatomy`:
+  - `field/cow.txt` = `"moo"`
+  - `field/sheep.txt` = `"baa"`
+  - `field/tree/owl.txt` = `"hoot"`
+  - `pond/duck.txt` = `"quack"`
+  - `pond/frog.txt` = `"ribbit"`
+- `.DS_Store` files are intentionally ignored for this anatomy write-up.
+- For deterministic spell-out, file order below is path-sorted (the real packer shuffles file order at runtime).
+
+## Derived sizes
+Per-file logical record size = `2 + path_len + 8 + file_bytes`.
+
+- `field/cow.txt`: `2 + 13 + 8 + 3 = 26`
+- `field/sheep.txt`: `2 + 15 + 8 + 3 = 28`
+- `field/tree/owl.txt`: `2 + 18 + 8 + 4 = 32`
+- `pond/duck.txt`: `2 + 13 + 8 + 5 = 28`
+- `pond/frog.txt`: `2 + 13 + 8 + 6 = 29`
+
+Total logical stream = `26 + 28 + 32 + 28 + 29 = 143` bytes.
+
+Each archive page carries 4 L1 blocks, each block payload is 8 bytes, so payload per archive is `32` bytes.
+Needed archives = `ceil(143 / 32) = 5` archives.
+
+## Files created
+Under these assumptions/order, archives are:
+- `snowstorm_0000N.jag`
+- `snowstorm_0001N.jag`
+- `snowstorm_0002N.jag`
+- `snowstorm_0003R.jag`
+- `snowstorm_0004N.jag`
+
+Marker rationale (`R`/`N`): current code marks `R` only when `first_file_offset_in_archive` is `> 0` and `< (56 - 16) = 40`.
+
+## Per-file logical records (hex)
+1) `field/cow.txt` (`"moo"`)
+- len: `0D 00`
+- name: `66 69 65 6C 64 2F 63 6F 77 2E 74 78 74`
+- size: `03 00 00 00 00 00 00 00`
+- data: `6D 6F 6F`
+
+2) `field/sheep.txt` (`"baa"`)
+- len: `0F 00`
+- name: `66 69 65 6C 64 2F 73 68 65 65 70 2E 74 78 74`
+- size: `03 00 00 00 00 00 00 00`
+- data: `62 61 61`
+
+3) `field/tree/owl.txt` (`"hoot"`)
+- len: `12 00`
+- name: `66 69 65 6C 64 2F 74 72 65 65 2F 6F 77 6C 2E 74 78 74`
+- size: `04 00 00 00 00 00 00 00`
+- data: `68 6F 6F 74`
+
+4) `pond/duck.txt` (`"quack"`)
+- len: `0D 00`
+- name: `70 6F 6E 64 2F 64 75 63 6B 2E 74 78 74`
+- size: `05 00 00 00 00 00 00 00`
+- data: `71 75 61 63 6B`
+
+5) `pond/frog.txt` (`"ribbit"`)
+- len: `0D 00`
+- name: `70 6F 6E 64 2F 66 72 6F 67 2E 74 78 74`
+- size: `06 00 00 00 00 00 00 00`
+- data: `72 69 62 62 69 74`
+
+## L1 recovery header values (UInt48 LE)
+With this file order, per-file `next_file_offset` values are:
+- cow -> `26` = `1A 00 00 00 00 00`
+- sheep -> `54` = `36 00 00 00 00 00`
+- owl -> `86` = `56 00 00 00 00 00`
+- duck -> `114` = `72 00 00 00 00 00`
+- frog -> `0` = `00 00 00 00 00 00`
+
+## Archive spell-out (all archives)
+Each 14-byte L1 block is: `6-byte L1 header | 8-byte payload`.
+Each archive has exactly 4 blocks (56 bytes page) plus a 16-byte plain file header.
+
+### `snowstorm_0000N.jag`
+Plain 16-byte file header:
+- `50 42 46 48 01 00 00 00 00 00 00 00 00 00 00 00`
+  - first-file-offset = `0` -> `N`
+
+Page blocks:
+- B0: `1A 00 00 00 00 00 | 0D 00 66 69 65 6C 64 2F`
+- B1: `1A 00 00 00 00 00 | 63 6F 77 2E 74 78 74 03`
+- B2: `1A 00 00 00 00 00 | 00 00 00 00 00 00 00 6D`
+- B3: `1A 00 00 00 00 00 | 6F 6F 0F 00 66 69 65 6C`
+
+### `snowstorm_0001N.jag`
+Plain 16-byte file header first-file-offset is at page byte offset `40` (not `< 40`), so marker stays `N`.
+
+Page blocks:
+- B0: `36 00 00 00 00 00 | 64 2F 73 68 65 65 70 2E`
+- B1: `36 00 00 00 00 00 | 74 78 74 03 00 00 00 00`
+- B2: `36 00 00 00 00 00 | 00 00 00 62 61 61 12 00`
+- B3: `56 00 00 00 00 00 | 66 69 65 6C 64 2F 74 72`
+
+### `snowstorm_0002N.jag`
+Plain 16-byte file header first-file-offset is at page byte offset `40` (not `< 40`), so marker stays `N`.
+
+Page blocks:
+- B0: `56 00 00 00 00 00 | 65 65 2F 6F 77 6C 2E 74`
+- B1: `56 00 00 00 00 00 | 78 74 04 00 00 00 00 00`
+- B2: `56 00 00 00 00 00 | 00 00 68 6F 6F 74 0D 00`
+- B3: `72 00 00 00 00 00 | 70 6F 6E 64 2F 64 75 63`
+
+### `snowstorm_0003R.jag`
+Plain 16-byte file header first-file-offset is page byte offset `36` (`>0` and `<40`), so marker is `R`.
+
+Page blocks:
+- B0: `72 00 00 00 00 00 | 6B 2E 74 78 74 05 00 00`
+- B1: `72 00 00 00 00 00 | 00 00 00 00 00 71 75 61`
+- B2: `72 00 00 00 00 00 | 63 6B 0D 00 70 6F 6E 64`
+- B3: `00 00 00 00 00 00 | 2F 66 72 6F 67 2E 74 78`
+
+### `snowstorm_0004N.jag`
+Plain 16-byte file header has first-file-offset `0`, so marker is `N`.
+
+Page blocks:
+- B0: `00 00 00 00 00 00 | 74 06 00 00 00 00 00 00`
+- B1: `00 00 00 00 00 00 | 00 72 69 62 62 69 74 00`
+- B2: `00 00 00 00 00 00 | 00 00 00 00 00 00 00 00`
+- B3: `00 00 00 00 00 00 | 00 00 00 00 00 00 00 00`
+
+## Size per archive
+Each archive file size is:
+- `16-byte plain header + 56-byte page = 72 bytes`
+
+Total for 5 archives:
+- `5 * 72 = 360 bytes`

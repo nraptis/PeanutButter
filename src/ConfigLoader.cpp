@@ -75,8 +75,11 @@ AppConfig loadConfig(const std::filesystem::path& pConfigPath) {
   aConfig.mDefaultSourcePath = findJsonStringValue(aJsonText, "default_source_path", aConfig.mDefaultSourcePath);
   aConfig.mDefaultArchivePath = findJsonStringValue(aJsonText, "default_archive_path", aConfig.mDefaultArchivePath);
   aConfig.mDefaultUnarchivePath = findJsonStringValue(aJsonText, "default_unarchive_path", aConfig.mDefaultUnarchivePath);
+  aConfig.mDefaultRecoveryPath = findJsonStringValue(aJsonText, "default_recovery_path", aConfig.mDefaultRecoveryPath);
   aConfig.mDefaultPassword1 = findJsonStringValue(aJsonText, "default_password_1", aConfig.mDefaultPassword1);
   aConfig.mDefaultPassword2 = findJsonStringValue(aJsonText, "default_password_2", aConfig.mDefaultPassword2);
+  aConfig.mDefaultFilePrefix = findJsonStringValue(aJsonText, "default_file_prefix", aConfig.mDefaultFilePrefix);
+  aConfig.mDefaultFileSuffix = findJsonStringValue(aJsonText, "default_file_suffix", aConfig.mDefaultFileSuffix);
   aConfig.mDefaultArchiveSize = findJsonUInt64Value(aJsonText, "default_archive_size", aConfig.mDefaultArchiveSize);
 
   return aConfig;

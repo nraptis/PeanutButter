@@ -11,11 +11,14 @@ namespace fs = std::filesystem;
 
 bool shouldIgnoreEntry(const fs::path& pPath);
 std::string bundleName(std::uint64_t pIndex);
+std::string bundleNameWithRecoveryMarker(std::uint64_t pIndex, bool pHasRecoveryStart);
 bool hasMeaningfulEntries(const fs::path& pDirectory);
 
 void writeUInt16(std::vector<char>& pOut, std::uint16_t pValue);
+void writeUInt48(std::vector<char>& pOut, std::uint64_t pValue);
 void writeUInt64(std::vector<char>& pOut, std::uint64_t pValue);
 std::uint16_t readUInt16(const std::vector<char>& pRaw);
+std::uint64_t readUInt48(const std::vector<char>& pRaw);
 std::uint64_t readUInt64(const std::vector<char>& pRaw);
 
 void appendName(std::vector<char>& pOut, const std::string& pName);
